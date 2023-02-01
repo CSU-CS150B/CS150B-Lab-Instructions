@@ -1,3 +1,5 @@
+# Lab 01: All About Functions Lab
+
 ## Creating your own print statement (Step 1)
 
 We will continue with the printStatement function. Under the print(“Welcome to your second lab”), print “This is my first print statement!”. 
