@@ -89,8 +89,8 @@ Don’t forget to call the function to see the output. Make sure to put it above
 
 If you do this successfully, the output should look like:
 ```
-    Hello World!  
-    This is my first print statement! 
+    Welcome to your second lab!
+    I'm learning about functions!
     This is my first return statement!
     4
     35
