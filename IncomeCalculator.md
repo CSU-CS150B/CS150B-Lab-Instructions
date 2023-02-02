@@ -37,7 +37,7 @@ This function, called employee_info(), will take in 6 parameters, first name, la
 
 You will create a new String that formats the given parameters, each parameter will be followed by a new line in the firmatted String (hint: \n\). The format is as follows:
 ```
-Last,First
+Last, First
 $income
 department
 email
