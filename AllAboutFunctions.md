@@ -75,7 +75,7 @@ Output should look like this:
 ## Putting it all together (Step 5)
 In this step we will be combining everything we’ve learned so far.
 
-1. First you will need to define a function called iceCreamOrder. Go to step 0.5 to learn about defining a function if you don’t remember how to.
+1. First you will need to define a function called iceCreamOrder with no parameters. Go to step 0.5 to learn about defining a function if you don’t remember how to.
 2. Within that function, create an int variable called cost and assign it to equal 6.
 3. Then ask the user for input asking “What flavor would you like? => “ and store their answer in a variable called flavor. Hint: If you don’t remember user input, look back at lab 00.
 4. Next return a statement stating “The **flavor** will cost **cost** dollars.” replacing flavor and cost with your two variables you created.
