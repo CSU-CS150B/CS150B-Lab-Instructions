@@ -73,13 +73,13 @@ You will have to call the get_topping_one function and if that value is equal to
 
 In case you forgot how to call functions inside of functions, here is an example:
 
-'''
+```
 def appleCount(numApples): # helper function
     total += numApples
     return total
 def findTotalApples():
     totalApples = appleCount(numApples) # creating a variable and assigning it to total from the helper function
-'''
+```
 
 
 Hint: Pass the pizza_order parameter into get_topping_one when calling the function
