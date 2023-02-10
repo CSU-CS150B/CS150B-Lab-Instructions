@@ -20,11 +20,12 @@ To understand this function, we must first introduce slices. This is when we tak
 
 
 For example:
+```
 example = 'ABCDEF'
 print(example[0]) # prints 'A'
 print(example[0:2]) # prints 'AB'
 print(example[3:6]) # prints 'DEF'
-
+```
 
 Topping one can only be 6 letters long, in order for our string slicing to work properly. Since topping one is the beginning of our pizza order we need to extract the topping starting at the first index of the string, which is where we get the 0 in pizza_order[0:7]. The index after the colon is where we want to stop the string. This character at that index will NOT be included in the string slice.
 
@@ -55,9 +56,9 @@ Oh no! The pizza price got turned into cents while being sent to the kitchen! Yo
 For the get_price() function, use casting to convert a string value to an int, divide it by 100 and return it.
 
 Hint: Here is the general formula for converting from cents to dollars 
-
+```
 cents/100 = Dollars
-
+```
 Note: Don’t forget you will need to use string slicing to extract the price from the string! (The price will always be 4 string characters long)
 
 Create your own test for this function using this string: “cheese, pepperoni, 3000”
