@@ -89,17 +89,17 @@ Hint: Pass the pizza_order parameter into get_topping_one when calling the funct
 
 Now we are putting all the steps together. You will need to write a series of if/elif/else statements to meet the following criteria:
 
-if too_much_cheese returns True, return “That’s a lot of cheese!”
+1. if too_much_cheese returns True, return “That’s a lot of cheese!”
 
-if too_much_cheese returns False AND get_price returns 45 return “Wow that’s an expensive pizza!”
+2. if too_much_cheese returns False AND get_price returns 45 return “Wow that’s an expensive pizza!”
 
-if get_topping_two returns pineapple return “Pineapple DOES belong on pizza.”
+3. if get_topping_two returns pineapple return “Pineapple DOES belong on pizza.”
 
-elif get_topping_two returns artichoke return “That’s an interesting combo.”
+4. elif get_topping_two returns artichoke return “That’s an interesting combo.”
 
-if get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
+5. if get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
 
-else return “Now that’s a smokin’ deal! Give me more!”
+6. else return “Now that’s a smokin’ deal! Give me more!”
 
 Hint: You will need to call the other functions you completed in prior steps
 
