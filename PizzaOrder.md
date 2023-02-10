@@ -65,9 +65,12 @@ Create your own test for this function using this string: “cheese, pepperoni, 
 The value you should see should be 30.
 
 ## Too Much Cheese! (Step 4)
-This function returns True or False depending on if there is cheese in the order. 
+This function returns True or False depending on if there is cheese in the order.
+
 Remember cheese can only be topping one because it is 5 letters.
+
 You will have to call the get_topping_one function and if that value is equal to cheese, return True. Otherwise, return False.
+
 In case you forgot how to call functions inside of functions, here is an example:
 
 
