@@ -84,3 +84,33 @@ def findTotalApples():
 
 
 Hint: Pass the pizza_order parameter into get_topping_one when calling the function
+
+## Full Order (Step 5)
+
+Now we are putting all the steps together. You will need to write a series of if/elif/else statements to meet the following criteria:
+
+if too_much_cheese returns True, return “That’s a lot of cheese!”
+
+if too_much_cheese returns False AND get_price returns 45 return “Wow that’s an expensive pizza!”
+
+if get_topping_two returns pineapple return “Pineapple DOES belong on pizza.”
+
+elif get_topping_two returns artichoke return “That’s an interesting combo.”
+
+if get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
+
+else return “Now that’s a smokin’ deal! Give me more!”
+
+Hint: You will need to call the other functions you completed in prior steps
+
+Hint: Pay close attention to the wording given to determine if you need if, elif, or else
+
+Turning In (Step 6)
+
+If you feel confident about your answers in develop mode, now you can run in submit mode to make sure you get full points.
+
+Make sure you click through the Canvas link to the assignment if you haven’t already. 
+
+This triggers the linking process, so Canvas can get an updated score.
+
+
