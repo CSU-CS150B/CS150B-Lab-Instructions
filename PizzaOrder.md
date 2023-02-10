@@ -1,6 +1,7 @@
 # Lab 05: Pizza Order 
 
 ## Introduction
+
 In this lab you will get more practice with branching by extracting the code from a pizza order.
 
 
@@ -9,6 +10,7 @@ topping_one, topping_two, price
 
 
 ## Get Topping One (Step 1)
+
 Find the get_topping_one function in zyBooks. This has already been completed for you.
 
 Please read through it, it will give you a hint for what to do for the next functions!
@@ -25,3 +27,25 @@ print(example[3:6]) # prints 'DEF'
 
 
 Topping one can only be 6 letters long, in order for our string slicing to work properly. Since topping one is the beginning of our pizza order we need to extract the topping starting at the first index of the string, which is where we get the 0 in pizza_order[0:7]. The index after the colon is where we want to stop the string. This character at that index will NOT be included in the string slice.
+
+### Testing
+
+Uncomment the two tests given to you for get_topping_one(). The first test should print out cheese and the second one olives.
+
+## Get Topping Two (Step 2)
+This function is very similar to the one you wrote above however it is extracting topping two from the string. 
+
+You will need to figure out the indexes to extract a 9-letter topping. 
+
+You won’t start at index 0 this time because you don’t want topping 1. 
+
+What index will you need to start at? 
+
+You need the index where the letter ‘p’ is at. 
+
+Then you will have to count and stop at where the comma is at (remember that index is exclusive - meaning it won’t be included in the string).
+
+Create your own test for this function using this string: “cheese, pepperoni, 3000”
+
+If you did it correctly, pepperoni should be the only thing returned.
+
