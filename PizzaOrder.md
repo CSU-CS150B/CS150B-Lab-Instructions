@@ -63,3 +63,19 @@ Note: Don’t forget you will need to use string slicing to extract the price fr
 Create your own test for this function using this string: “cheese, pepperoni, 3000”
 
 The value you should see should be 30.
+
+## Too Much Cheese! (Step 4)
+This function returns True or False depending on if there is cheese in the order. 
+Remember cheese can only be topping one because it is 5 letters.
+You will have to call the get_topping_one function and if that value is equal to cheese, return True. Otherwise, return False.
+In case you forgot how to call functions inside of functions, here is an example:
+
+
+def appleCount(numApples): # helper function
+    total += numApples
+    return total
+def findTotalApples():
+    totalApples = appleCount(numApples) # creating a variable and assigning it to total from the helper function
+
+
+Hint: Pass the pizza_order parameter into get_topping_one when calling the function
