@@ -105,7 +105,7 @@ Hint: You will need to call the other functions you completed in prior steps
 
 Hint: Pay close attention to the wording given to determine if you need if, elif, or else
 
-Turning In (Step 6)
+## Turning In (Step 6)
 
 If you feel confident about your answers in develop mode, now you can run in submit mode to make sure you get full points.
 
