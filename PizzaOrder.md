@@ -49,3 +49,17 @@ Create your own test for this function using this string: “cheese, pepperoni, 
 
 If you did it correctly, pepperoni should be the only thing returned.
 
+## Get price (Step 3)
+Oh no! The pizza price got turned into cents while being sent to the kitchen! You need to convert the price back to dollars. 
+
+For the get_price() function, use casting to convert a string value to an int, divide it by 100 and return it.
+
+Hint: Here is the general formula for converting from cents to dollars 
+
+cents/100 = Dollars
+
+Note: Don’t forget you will need to use string slicing to extract the price from the string! (The price will always be 4 string characters long)
+
+Create your own test for this function using this string: “cheese, pepperoni, 3000”
+
+The value you should see should be 30.
