@@ -1,4 +1,4 @@
-# Lab 05: Pizza Order 
+# Lab 05: Pizza Order Lab
 
 ## Introduction
 
@@ -20,7 +20,7 @@ To understand this function, we must first introduce slices. This is when we tak
 
 
 For example:
-```
+```python
 example = 'ABCDEF'
 print(example[0]) # prints 'A'
 print(example[0:2]) # prints 'AB'
