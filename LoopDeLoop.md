@@ -12,7 +12,7 @@ Then, there is a for loop that starts at 0 and ends at the parameter that was pa
 Once the loop is done, it returns the list.
 
 Examples:
-```
+``` python
 makelist(10) # returns [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 makelist(3)  # returns [0, 1, 2] 
 ```
@@ -25,7 +25,7 @@ In this function you will start by making an empty list, then you will make a fo
 You will be adding each number as it is passed through the for loop to your list and when it hits 0, you will add the string ‘We have lift off!’
 
 Examples:
-```
+``` python
 rocketcountdown(10) # returns [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 'We have lift off!']
 rocketcountdown(2)  # returns [2, 1, 'We have lift off!']
 ```
@@ -38,16 +38,17 @@ You will want to make a nested loop for the list to parse through all the possib
 You will pair them together with the use of string formatting and then separate them by a colon.
 
 Examples:
-```
+``` python
 doubleloop(2, 2) # returns ['0:0' , '0:1' , '1:0' , '1:1']
 doubleloop(3, 4) # returns ['0:0', '0:1', '0:2', '0:3', '1:0', 
                            '1:1', '1:2', '1:3', '2:0', '2:1', '2:2', '2:3']
 ```
 Here’s an example of a nested loop:
-
+``` python
     for i in range(num1):
         for j in range(num2):
             list.append('{},{}'.format(i,j))
+```
 ## Step 4 - How many combinations?
 In this step, you will be creating a function called howmanycombos() and it will take in 3 parameters, all integers. 
 
@@ -66,7 +67,7 @@ Once the list has all possible combinations, return the list to be printed.
 Hint: This is very similar to step 3, except there will be three loops nested instead of 2.
 
 Examples:
-```
+``` python
 howmanycombos(1,1,1) # returns ['0:0:0', '0:0:1', '0:1:0', '0:1:1', '1:0:0', '1:0:1', '1:1:0', '1:1:1']
 ```
 ## Step 5 - Cans of pop on the wall
@@ -97,7 +98,7 @@ You need to add something in your code so that cans of pop equals 0 at the end.
  
 
   Examples (ignore new lines - only there so you can see it on the webpage)
-```
+``` python
 cansofpop(3, 1) # returns ['3 cans of pop on the wall 3 cans of pop, take 1 down and pass them around, 
 #                           2 cans of pop on the wall', '2 cans of pop on the wall 2 cans of pop, 
 #                           take 1 down and pass them around, 1 cans of pop on the wall', 
