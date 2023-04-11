@@ -42,7 +42,7 @@ Once you have the base case in place, then work on the recursive call. While the
 ### Testing
 For testing recursive methods, your tests often happen at multiple parts. We personally would test after we write the base case, passing in the condition for the base case as the parameter in my test. This may seem tedious at first, but you are basically ‘solving’ the simplest case first - making sure it works, and then working on the n+1 case for the recursive call. We would then start testing as we work on the recursive call - you may not always get the results you expect - and that is fine.
 
-## Step 4 - reverse_string(string)
+## Step 4 - string_reverse(string)
 We are going to work with strings now. This function called string_reverse() will take in a string parameter should return the string reversed. Algorithm wise, this function will take out the last character in the string and recursively calls the function with the string minus the last character (hint: use the string splice operator :)
 
 We have provided the base case. Why is this the base case? When do you hit that base case?
