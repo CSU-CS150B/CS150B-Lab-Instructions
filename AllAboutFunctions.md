@@ -83,6 +83,8 @@ In this step we will be combining everything we’ve learned so far.
 
 *Hint: Use casting to cast cost from an int to a string or else it won’t return properly. (An error will occur)*
 
+__In the run() function, make sure to write a function call to your iceCreamOrder() function so that you will get output.__
+
 In the zyBooks input box, put ‘vanilla’ to test your code.
 
 Don’t forget to call the function to see the output. Make sure to put it above the return in run().
