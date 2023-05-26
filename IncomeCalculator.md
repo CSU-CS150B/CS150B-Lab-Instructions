@@ -20,14 +20,14 @@ Calculate what the total income would be for someone per year using the variable
 
 This step you will write a function called format_name(). This, like the previous function, will take 2 parameters. The first parameter will be the first name of an employee and the second parameter will be their last name.
 
-Once you have included the parameters, you will create a new String that takes the first and last name and formats them to be in the order “lastname, firstname”. The goal is to use String formatting and pass in the values of the first and last name into a new String. It should also be followed by a new line.
+Once you have included the parameters, you will create a new String that takes the first and last name and formats them to be in the order “lastname, firstname”. The goal is to use String formatting and pass in the values of the first and last name into a new String.
 
 **Note: Make sure there is no newline character in return string of the format_name function, otherwise the final test will fail, even though the output will look exactly the same**
 
 For example:
 
 ```python
-format_name("Spencer", "Baloga Loufek") # returns -  "Baloga Loufek, Spencer\n"
+format_name("Spencer", "Baloga Loufek") # returns -  "Baloga Loufek, Spencer"
 ```
 
 You need to return a value, but remember to test what is returned (hint: use print(format_name("first", "last")) to test!)
