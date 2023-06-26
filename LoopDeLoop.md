@@ -47,7 +47,7 @@ Here’s an example of a nested loop:
 ``` python
     for i in range(num1):
         for j in range(num2):
-            list.append('{},{}'.format(i,j))
+            list.append(f'{i},{j}')
 ```
 ## Step 4 - How many combinations?
 In this step, you will be creating a function called howmanycombos() and it will take in 3 parameters, all integers. 
