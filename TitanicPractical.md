@@ -5,6 +5,8 @@ The titanic sunk in 1912, but the general public doesn't know much about its pas
 ## Introduction
 In this practical you will be extracting data from a csv file about Titanic passengers, you will be trying to gather information about them as a whole.
 
+__Make sure to open the CSV file and look at it to understand how the file works__
+
 For quick reference, the file is laid out as follows.
 * PassengerId
 * __Survived__
