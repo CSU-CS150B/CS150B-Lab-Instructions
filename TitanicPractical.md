@@ -1,6 +1,6 @@
 # Practical Project > Titanic
 
-The titanic sunk in 1912, but the general public doesn't know much about its passengers. This dataset contains the details of passengers upon the "unsinkable titanic".
+The titanic sunk in 1912, but the general public doesn't know much about its passengers. This dataset contains the details of passengers of the "unsinkable titanic".
 
 ## Introduction
 In this practical you will be extracting data from a csv file about Titanic passengers, you will be trying to gather information about them as a whole.
