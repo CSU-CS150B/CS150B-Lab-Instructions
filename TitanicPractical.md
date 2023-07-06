@@ -19,7 +19,7 @@ For quick reference, the file is laid out as follows.
 * Cabin
 * Embarked
 
-__The names in bold are the collumns that you will be using in your program.__
+__The names in bold are the columns that you will be using in your program.__
 
 ## Variables (Step 0)
 you will create four variables as file wide variables (often called global). Each variable is the index value of the column in the titanic.csv file.
