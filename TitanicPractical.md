@@ -74,7 +74,7 @@ your answer from the file should be a long decimal value and that is okay, we wi
 ## Step 4: survival_rate_gender(passenger_list)
 This function will do something very similar to step 3, but instead of keeping an overall survival percentage, it keeps a seperate survival percentage for male and female.
 
-This means you will need to count count their number of survives and total number for each gender seperately.
+This means you will need to count their number of survives and total number for each gender seperately.
 
 At the end you will return a tuple in the form of (male_surivival_rate, female_survival_rate)
 Remember in order to return a tuple you use the form return (item, item)
