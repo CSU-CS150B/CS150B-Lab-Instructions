@@ -85,7 +85,7 @@ print("TESTING",survival_rate_gender(test_list))
 print("TESTING", survival_rate_gender(csv_reader(filename)))
 ```
 
-## Step 5: average_ticket_fare(passenger_list
+## Step 5: average_ticket_fare(passenger_list)
 This function will take in a list created from the csv reader and will parse through it to find the average ticket price, as denoted by the fare column of the file.
 
 ## Step 6: main()
