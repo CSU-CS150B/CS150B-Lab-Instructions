@@ -8,18 +8,18 @@ In this practical you will be extracting data from a csv file about Titanic pass
 __Make sure to open the CSV file and look at it to understand how the file works__
 
 For quick reference, the file is laid out as follows.
-* PassengerId
-* __Survived__
-* Pclass
-* __Name__
-* __Sex__
-* Age
-* SibSp
-* Parch
-* Ticket
-* __Fare__
-* Cabin
-* Embarked
+* PassengerId (ID number of the given passenger)
+* __Survived__ (Did the passenger survive? 1 if yes 0 if no)
+* Pclass (What class of ticket did the passenger buy,values range from 1-3)
+* __Name__ (What is the name of the passenger)
+* __Sex__ (What is the sex of the passenger)
+* Age (How old was the passenger at the time of the disaster)
+* SibSp (How many siblings and spouses did the passenger have aboard the ship)
+* Parch (How many parents and children did the passenger have aboard the ship)
+* Ticket (What ticket did the passenger have, ticket number)
+* __Fare__ (How much did the ticket cost)
+* Cabin (What cabin was the passenger in)
+* Embarked (Port of Embarkation C = Cherbourg; Q = Queenstown; S = Southampton)
 
 __The names in bold are the columns that you will be using in your program.__
 
