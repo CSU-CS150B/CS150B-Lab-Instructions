@@ -70,7 +70,9 @@ We have provided an example, but you may want to write your own. Also, make sure
 
 ## Step 6 - even_odd_list(values)
 This is the function where you put all the different concepts together. You will build a function from scratch that will take in a list of number values. You will recursively build another list that has “even” or “odd” matching each number in the original list! Really think about how it can be done recursively.
-
+```python3
+even_odd_list([1,2,3,4,5]) #returns ['odd','even','odd','even','odd']
+```
 This type of function is called ‘map-to’ or ‘map’, where you map a set of values across a different set of values - and is very common in recursion and later when you study data structures! If you recall the Human DNA Lab, you had to convert a series of strings to ints. If you knew recursion at that time, you could have done that relatively quickly using a built in function called map.
 
 ### Testing
