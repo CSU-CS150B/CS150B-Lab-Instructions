@@ -32,7 +32,7 @@ Find the file_addition function. In this function, you will need to open a file 
 ```
 There will be two numbers each on separate lines. You will read in the those two lines, convert the numbers to integers, and return the sum of adding the two together. Remember when you read in a file it reads it in as a string, which is why you need to convert the numbers to integers. int(val) will help you!
 
-If you are stuck on where to start, take a look at Figure 11.4.1 in your zybook. Do not ‘write’ like the example in zybook does. Instead, just return the result of adding the two numbers together.
+If you are stuck on where to start, take a look at Figure 9.4.1 in your zybook. Do not ‘write’ like the example in zybook does. Instead, just return the result of adding the two numbers together.
 
 ## line_counter(filename) (Step 2)
 For this function, you should use the with statement to open a file. You will then want to count the number of lines in the file, and simply return the total lines. There are two ways you can look at doing this. You could loop through every line incrementing a counter. OR you can use the .readlines() to load every line into a list, and take the len() of that list.
