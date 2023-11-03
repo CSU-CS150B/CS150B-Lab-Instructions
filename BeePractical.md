@@ -1,4 +1,4 @@
-
+# Insecticide Effect On Bees
 
 Effects of insecticide on bees (usda.gov). Field and Lab data regarding the effects of 4 sublethal concentrations of a neonicotinoid insecticide (Imidacloprid) on honey bees and about a dozen native bee species.
 Details
@@ -115,14 +115,69 @@ RETURN: [['SOLITARY', 'Apis', 1, 2, 3],
 ```
 ## calc_averages(filtered_data)
 
-Given the filtered data from the earlier step, calculate and return the average for the Imidacloprid concentration (parts per billion), bee longevity in bioassay (days), and days paralyzed columns.
+Given the filtered data from the earlier step as a parameter to this function,
+
+calculate and return the average for three different columns of the table
+
+- the Imidacloprid concentration (parts per billion), 
+
+- bee longevity in bioassay (days), 
+
+- and days paralyzed.
+
+Return these three values in a tuple with the form (concentration, longevity, days).
+
+__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
+### calc_average(data, column_index)
+This is a recommended helper function that you can use to find an average for a single column, doing this function would help you with the earlier function.
+
+The function takes two parameters, the data you want to look through and the index of the column that you want the average of.
+
+Then it finds the average value in that column.
+
 ## calc_minimums(filtered_data)
 
-Given the filtered data, calculate and return the minimum for the Imidacloprid concentration (parts per billion), bee longevity in bioassay (days), and days paralyzed columns.
+Given the filtered data from the earlier step as a parameter to this function,
+
+calculate and return the minimum for three different columns of the table,
+
+- the Imidacloprid concentration (parts per billion), 
+
+- bee longevity in bioassay (days), 
+
+- and days paralyzed.
+
+Return these three values in a tuple with the form (concentration, longevity, days).
+__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
+
+### calc_minimum(data, column_index)
+This is a recommended helper function that you can use to find an minimum value for a single column, doing this function would help you with the earlier function.
+
+The function takes two parameters, the data you want to look through and the index of the column that you want the minimum of.
+
+Then it finds the minimum value in that column.
 ## calc_maximums(filtered_data)
 
-Given the filtered data, calculate and return the maximum for the Imidacloprid concentration (parts per billion), bee longevity in bioassay (days), and days paralyzed columns.
-print_stats(user_input, stat_type, stats)
+Given the filtered data from the earlier step as a parameter to this function, 
+
+calculate and return the maximum for three different columns of the table,
+
+- the Imidacloprid concentration (parts per billion),
+
+- bee longevity in bioassay (days),
+
+- and days paralyzed.
+
+Return these three values in a tuple with the form (concentration, longevity, days).
+__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
+
+### calc_maximum(data, column_index)
+This is a recommended helper function that you can use to find an maximum value for a single column, doing this function would help you with the earlier function.
+
+The function takes two parameters, the data you want to look through and the index of the column that you want the maximum of.
+
+Then it finds the maximum value in that column.
+## print_stats(user_input, stat_type, stats)
 
 This function takes the user’s input, the type of statistic you are printing, and the statistics that will be printed. The statistics should show 2 decimal places.
 
