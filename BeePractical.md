@@ -46,6 +46,10 @@ This file is the main driver file of your program. It will display the averages 
 
 The final output will print out the average imidacloprid concentration, longevity, and days paralyzed for the given input (Sociality or Genus/Species). Use the following examples as a template for the output
 
+## Running this code
+in order for this code to work it needs a parameter of the name of the CSV file to read to be provided to the program.
+In the "Run Command" box, next to the User Input box, enter the name of the file "BEETOX.csv"
+
 ### Example given genus (Apis):
 ```
 Averages for APIS bees:
