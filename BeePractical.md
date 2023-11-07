@@ -212,9 +212,10 @@ def main():
     while run(data):
         continue
 ```
-## Suggestions / Insights
+## Conclusion
 
-If you would like to expand upon the data, there are many different things you could look for. Examples are:
+This reaches the end of what is required of your coding practical, however, after submitting, if you'd like to use python to investigate your data further, you are highly encouraged to do so!
+If you would like to expand upon your data analysis, there are many different things you could look for. Examples are:
 
 - Floral host differences across averages
 - Sex differences across averages
