@@ -1,7 +1,8 @@
 # Insecticide Effect On Bees
 
-Effects of insecticide on bees (usda.gov). Field and Lab data regarding the effects of 4 sublethal concentrations of a neonicotinoid insecticide (Imidacloprid) on honey bees and about a dozen native bee species.
-Details
+For this assignment, you will be reading and filtering CSV data focused on the effects of insecticide on bees, sourced from usda.gov. This is field and lab data regarding the effects of 4 sublethal concentrations of a neonicotinoid insecticide (Imidacloprid) on honey bees and about a dozen native bee species.
+
+As you work through this program, don't be intimidated by its size!<br>These instructions break the work you have to do into manageable chunks, so just work one step at a time, reading the instructions thoroughly and thinking through how you will go about coding each function.
 
 #### The columns in the data are in order:
 
@@ -212,8 +213,6 @@ def main():
         continue
 ```
 Suggestions / Insights
-
-Before you start coding it is always good to plan your code out. Look at what each method is asking for and think about how you can accomplish it. (Think about how an average is calculated, and how to compare strings.)
 
 If you would like to expand upon the data there are many different things you could look for. Examples are:
 
