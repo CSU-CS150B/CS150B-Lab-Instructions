@@ -212,9 +212,9 @@ def main():
     while run(data):
         continue
 ```
-Suggestions / Insights
+## Suggestions / Insights
 
-If you would like to expand upon the data there are many different things you could look for. Examples are:
+If you would like to expand upon the data, there are many different things you could look for. Examples are:
 
 - Floral host differences across averages
 - Sex differences across averages
