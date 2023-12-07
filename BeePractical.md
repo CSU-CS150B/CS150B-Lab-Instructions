@@ -109,6 +109,8 @@ The rows that are equal to the user_input variable are then added to a new list 
 
 __Make sure that you use the .upper() method before doing the comparison to make sure that capitalization doesn't matter__
 
+__DO NOT USE IN WHEN COMPARING WITH THE FILTER!__
+
 Example:
 ```
 GIVEN: user_input = APIS
