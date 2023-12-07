@@ -188,7 +188,7 @@ Then it finds the maximum value in that column.
 
 This function takes the user’s input, the type of statistic you are printing, and the statistics that will be printed. The statistics should show 2 decimal places.
 
-Example output for print_stats('Solitary', 'Average', [29.5802, 4.9714, 1.2649])
+Example output for print_stats('Solitary', 'Average', (29.5802, 4.9714, 1.2649))
 ```
 Averages for Solitary bees:
 Average Imidacloprid Concentration: 29.58
