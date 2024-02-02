@@ -35,7 +35,7 @@ You need to return a value, but remember to test what is returned (hint: use pri
 ## Step 3: employee_info(firstname, lastname, department, email, rate, period)
 This function, called employee_info(), will take in 6 parameters, first name, last name, department, email, rate, and period. You will be calling 2 other functions within this. You will need to call format_name() and calculate_income() to help you with this function.
 
-You will create a new String that formats the given parameters, each parameter will be followed by a new line in the formatted String (hints: newline = \n *and* don't forget the $ at the start of line 2). The format is as follows:
+You will create a new String that formats the given parameters, each parameter will be followed by a new line in the formatted String (hints: newline = \n *and don't* forget the $ at the start of line 2). The format is as follows:
 ```
 Last, First
 $income
