@@ -69,7 +69,7 @@ def a_func_with_if(val1, val2):
         ans = out_of_range(val2)
     elif val1 > 100:
         ans = out_of_range(val2)
-    else
+    else:
         ans = "In Range!" 
     return ans
 
