@@ -19,27 +19,23 @@ As you work through this program, don't be intimidated by its size!<br>These ins
 - 10 - days active
 - 11 - % of days bee is paralyzed
 
-#### The parts you will need for the methods you are tested on are:
+#### This is an example of how data is stored in the CSV file:
 
-__Level of Sociality:__
+| Level of Sociality | Degree of floral specialization | Habitat floral host | Bee species | Bee genus/species | Date bee captured | Bee sex | Imidacloprid concentration | Bee longevity in bioassay | Days paralyzed | Days active | % days bee is paralyzed |
+|--------------------|---------------------------------|---------------------|-----------------|-------------------|---------------------------------------------------------------|---------|---------------------------------------------|------------------------------------|----------------|--------------|---------------------------|
+| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 277                                                           | F       | 20                                          | 5                                  | 0              | 5            | 0                         |
+| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 279                                                           | F       | 100                                         | 3                                  | 3              | 0            | 100                       |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 1                                  | 0              | 1            | 0                         |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 3                                  | 0              | 3            | 0                         |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 4                                  | 0              | 3            | 0                         |
 
-this indicates whether a bee is social or solitary
+#### You will be using the following columns to complete to project:
 
-__bee genus/species:__
-
-This states the genus or species of the bee
-
-__Imidacloprid concentration (parts per billion):__
-
-States the concentration of insecticide used
-
-__bee longevity in bioassay (days):__
-
-This states the days the bee survived
-
-__days paralyzed:__
-
-This states the amount of days the bee was paralyzed
+- **Level of Sociality**: indicates whether a bee is social or solitary
+- **bee genus/species**: indicates the genus or species of the bee
+- **Imidacloprid concentration (parts per billion)**: indicates the concentration of insecticide used
+- **bee longevity in bioassay (days)**: number of days the bee survived
+- **days paralyzed**: number of days the bee was paralyzed
 
 ## main.py
 
