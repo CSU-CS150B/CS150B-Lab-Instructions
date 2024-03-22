@@ -39,51 +39,13 @@ As you work through this program, don't be intimidated by its size!<br>These ins
 
 ## main.py
 
-This file is the main driver file of your program. It will display the averages for the given input (Sociality or Genus/Species).
+All of your code will be written in main.py. The finished program will display the averages for the given input (Sociality or Genus/Species).
 
-The final output will print out the average imidacloprid concentration, longevity, and days paralyzed for the given input (Sociality or Genus/Species). Use the following examples as a template for the output
+The final output will print out the average _imidacloprid concentration_, _longevity_, and _days paralyzed_ for the given input (Sociality or Genus/Species). Use the following examples as a template for the output.
 
 ## Running this code
 in order for this code to work it needs a parameter of the name of the CSV file to read to be provided to the program.
 In the "Run Command" box, next to the User Input box, enter the name of the file "BEETOX.csv"
-
-### Example given genus (Apis):
-```
-Averages for APIS bees:
-Average Imidacloprid Concentration: 32.07
-Average Longevity: 9.73
-Average Days Paralyzed: 2.12
-
-Minimums for APIS bees:
-Minimum Imidacloprid Concentration: 0.00
-Minimum Longevity: 1.00
-Minimum Days Paralyzed: 0.00
-
-Maximums for APIS bees:
-Maximum Imidacloprid Concentration: 100.00
-Maximum Longevity: 20.00
-Maximum Days Paralyzed: 13.00
-```
-### Example given Sociality (Solitary):
-```
-Averages for Solitary bees:
-Average Imidacloprid Concentration: 29.51
-Average Longevity: 5.27
-Average Days Paralyzed: 1.34
-
-Minimums for Solitary bees:
-Minimum Imidacloprid Concentration: 0.00
-Minimum Longevity: 1.00
-Minimum Days Paralyzed: 0.00
-
-Maximums for Solitary bees:
-Maximum Imidacloprid Concentration: 100.00
-Maximum Longevity: 24.00
-Maximum Days Paralyzed: 14.00
-```
-Example given invalid input:
-
-Test not found. Please enter valid Sociality or Species/Genus
 
 Required Functions
 
@@ -210,6 +172,45 @@ def main():
     while run(data):
         continue
 ```
+
+## Example outputs
+### Example given genus (Apis):
+```
+Averages for APIS bees:
+Average Imidacloprid Concentration: 32.07
+Average Longevity: 9.73
+Average Days Paralyzed: 2.12
+
+Minimums for APIS bees:
+Minimum Imidacloprid Concentration: 0.00
+Minimum Longevity: 1.00
+Minimum Days Paralyzed: 0.00
+
+Maximums for APIS bees:
+Maximum Imidacloprid Concentration: 100.00
+Maximum Longevity: 20.00
+Maximum Days Paralyzed: 13.00
+```
+### Example given Sociality (Solitary):
+```
+Averages for Solitary bees:
+Average Imidacloprid Concentration: 29.51
+Average Longevity: 5.27
+Average Days Paralyzed: 1.34
+
+Minimums for Solitary bees:
+Minimum Imidacloprid Concentration: 0.00
+Minimum Longevity: 1.00
+Minimum Days Paralyzed: 0.00
+
+Maximums for Solitary bees:
+Maximum Imidacloprid Concentration: 100.00
+Maximum Longevity: 24.00
+Maximum Days Paralyzed: 14.00
+```
+Example given invalid input:
+
+Test not found. Please enter valid Sociality or Species/Genus
 ## Conclusion
 
 This reaches the end of what is required of your coding practical, however, after submitting, if you'd like to use python to investigate your data further, you are highly encouraged to do so!
