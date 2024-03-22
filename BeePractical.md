@@ -43,21 +43,23 @@ All of your code will be written in main.py. The finished program will display t
 
 The final output will print out the average _imidacloprid concentration_, _longevity_, and _days paralyzed_ for the given input (Sociality or Genus/Species). Use the following examples as a template for the output.
 
-## Running this code
-in order for this code to work it needs a parameter of the name of the CSV file to read to be provided to the program.
-In the "Run Command" box, next to the User Input box, enter the name of the file "BEETOX.csv"
-
-Required Functions
+## Required Functions to Implement(Graded)
 
 The goal of this practical is to be able to analyze a large amount of data using python and clearly display the results. The example output above should be used as a guideline for the finished product however, you will be graded on a function by function basis. The following functions are required:
-## read(csv_file)
+
+## Step 0: run(data) (for tests)
+
+This function will eventually take all of the functions you create and put them together.
+
+## Step 1: read(csv_file)
 
 This function takes the name of a csv file and will return a list of lists where each row is a list. 
 
 No filtering is done at this step. 
 
 Import and use the csv library or the pandas library.
-## filter_data(user_input, data)
+
+## Step 2: filter_data(user_input, data)
 
 This function takes the sociality/species/genus that the user provided and the data returned from the read() function as parameters.
 
@@ -78,7 +80,7 @@ GIVEN: user_input = APIS
 RETURN: [['SOLITARY', 'Apis', 1, 2, 3],
          ['SOLITARY', 'Apis', 1, 2, 3]]
 ```
-## calc_averages(filtered_data)
+## Step 2: calc_averages(filtered_data)
 
 Given the filtered data from the earlier step as a parameter to this function,
 
@@ -93,14 +95,14 @@ calculate and return the average for three different columns of the table
 Return these three values in a tuple with the form (concentration, longevity, days).
 
 __We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
-### calc_average(data, column_index)
+### Step 3: calc_average(data, column_index)
 This is a recommended helper function that you can use to find an average for a single column, doing this function would help you with the earlier function.
 
 The function takes two parameters, the data you want to look through and the index of the column that you want the average of.
 
 Then it finds the average value in that column.
 
-## calc_minimums(filtered_data)
+## Step 3: calc_minimums(filtered_data)
 
 Given the filtered data from the earlier step as a parameter to this function,
 
@@ -115,13 +117,14 @@ calculate and return the minimum for three different columns of the table,
 Return these three values in a tuple with the form (concentration, longevity, days).
 __We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
 
-### calc_minimum(data, column_index)
+### Step 3: calc_minimum(data, column_index)
 This is a recommended helper function that you can use to find an minimum value for a single column, doing this function would help you with the earlier function.
 
 The function takes two parameters, the data you want to look through and the index of the column that you want the minimum of.
 
 Then it finds the minimum value in that column.
-## calc_maximums(filtered_data)
+
+## Step 4: calc_maximums(filtered_data)
 
 Given the filtered data from the earlier step as a parameter to this function, 
 
@@ -136,13 +139,13 @@ calculate and return the maximum for three different columns of the table,
 Return these three values in a tuple with the form (concentration, longevity, days).
 __We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
 
-### calc_maximum(data, column_index)
+### Step 5: calc_maximum(data, column_index)
 This is a recommended helper function that you can use to find an maximum value for a single column, doing this function would help you with the earlier function.
 
 The function takes two parameters, the data you want to look through and the index of the column that you want the maximum of.
 
 Then it finds the maximum value in that column.
-## print_stats(user_input, stat_type, stats)
+## Step 6: print_stats(user_input, stat_type, stats)
 
 This function takes the user’s input, the type of statistic you are printing, and the statistics that will be printed. The statistics should show 2 decimal places.
 
@@ -153,13 +156,14 @@ Average Imidacloprid Concentration: 29.58
 Average Longevity: 4.97
 Average Days Paralyzed: 1.26
 ```
-## run(data)
 
-This function takes all of the functions you have created this far and puts them together. It should start by asking for input. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. This method should return True if it needs to be run again (there are two cases where this needs to occur) and return False if it does not need to run again.
-
-When asking for input, prompt the user with this sentence: “Enter the species/genus or the sociality of bee you would like information about: “
+## Step 7: finish run(data)
+ should start by asking for input. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. This method should return True if it needs to be run again (there are two cases where this needs to occur) and return False if it does not need to run again.
+ 
+ When asking for input, prompt the user with this sentence: “Enter the species/genus or the sociality of bee you would like information about: “
 
 When asking if the user would like to see more data, prompt the user by asking: “Would you like to see more data? (Y/N) “
+
 ## main()
 
 This function will be provided for you in order to keep the structure consistent for everyone.
