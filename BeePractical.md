@@ -6,42 +6,28 @@ As you work through this program, don't be intimidated by its size!<br>These ins
 
 #### The columns in the data are in order:
 
-- 0 - Level of Sociality
-- 1 - Degree of floral specialization
-- 2 - Habitat floral host
-- 3 - bee species
-- 4 - bee genus/species
-- 5 - Date bee captured and installed in bioassay unit (Julian day)
-- 6 - bee sex
-- 7 - Imidacloprid concentration (parts per billion)
-- 8 - bee longevity in bioassay (days)
-- 9 - days paralyzed
-- 10 - days active
-- 11 - % of days bee is paralyzed
+- 0 - Level of Sociality : indicates whether a bee is social or solitary.
+- 1 - bee genus/species : indicates the genus or species of the bee.
+- 2 - Imidacloprid concentration (parts per billion) : indicates the concentration of insecticide used.
+- 3 - bee longevity in bioassay (days) : indicates the number of days the bee survived.
+- 4 - days paralyzed : indicates the number of days the bee was paralyzed.
 
 #### This is an example of how data is stored in the CSV file:
 
-| Level of Sociality | Degree of floral specialization | Habitat floral host | Bee species | Bee genus/species | Date bee captured | Bee sex | Imidacloprid concentration | Bee longevity in bioassay | Days paralyzed | Days active | % days bee is paralyzed |
-|--------------------|---------------------------------|---------------------|-----------------|-------------------|---------------------------------------------------------------|---------|---------------------------------------------|------------------------------------|----------------|--------------|---------------------------|
-| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 277                                                           | F       | 20                                          | 5                                  | 0              | 5            | 0                         |
-| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 279                                                           | F       | 100                                         | 3                                  | 3              | 0            | 100                       |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 1                                  | 0              | 1            | 0                         |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 3                                  | 0              | 3            | 0                         |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera  | APIS              | 337                                                           | F       | 0                                           | 4                                  | 0              | 3            | 0                         |
+| Level of Sociality | Bee genus/species | Imidacloprid concentration (parts per billion) | Bee longevity in bioassay (days) | Days paralyzed |
+|:-------------------:|:-------------------:|:---------------------------------------------:|:------------------------------------:|:----------------:|
+| SOLITARY           | ANDRENA           | 20                                          | 5                                  | 0              |
+| SOLITARY           | ANDRENA           | 100                                         | 3                                  | 3              |
+| SOLITARY           | APIS              | 0                                           | 1                                  | 0              |
+| SOLITARY           | APIS              | 0                                           | 3                                  | 0              |
+| SOLITARY           | APIS              | 0                                           | 4                                  | 0              |
 
-#### You will be using the following columns to complete to project:
-
-- **Level of Sociality**: indicates whether a bee is social or solitary
-- **bee genus/species**: indicates the genus or species of the bee
-- **Imidacloprid concentration (parts per billion)**: indicates the concentration of insecticide used
-- **bee longevity in bioassay (days)**: number of days the bee survived
-- **days paralyzed**: number of days the bee was paralyzed
 
 ## main.py
 
 All of your code will be written in main.py. The finished program will display the averages for the given input (Sociality or Genus/Species).
 
-The final output will print out the average _imidacloprid concentration_, _longevity_, and _days paralyzed_ for the given input (Sociality or Genus/Species). Use the following examples as a template for the output.
+The final output will print out the average _imidacloprid concentration_, _longevity_, and _days paralyzed_ for the given input (Sociality or Genus/Species).
 
 ## Required Functions to Implement(Graded)
 
