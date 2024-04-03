@@ -29,9 +29,9 @@ All of your code will be written in main.py. The finished program will display t
 
 The final output will print out the average _imidacloprid concentration_, _longevity_, and _days paralyzed_ for the given input (Sociality or Genus/Species).
 
-## Required Functions to Implement(Graded)
+## Required Functions to Implement (Graded)
 
-The goal of this practical is to be able to analyze a large amount of data using python and clearly display the results. The example output above should be used as a guideline for the finished product however, you will be graded on a function by function basis. The following functions are required:
+The goal of this project is to be able to analyze a large amount of data using python and clearly display the results. You will be graded on a function by function basis. The following functions are required:
 
 ## Step 0: run(data) (for tests)
 
@@ -47,11 +47,11 @@ Import and use the csv library or the pandas library.
 
 ## Step 2: filter_data(user_input, data)
 
-This function takes the sociality/species/genus that the user provided and the data returned from the read() function as parameters.
+This function takes a user_input that can be the sociality, species or genus that the user provid and a data (list of lists) returned from the read() function (from **Step 1**) as parameters.
 
-Search through each row of the data and compare the specicies and sociality levels to the user_input variable.
+You must look through each row of the data (list of lists) and compare the specicies and sociality levels against the user_input variable.
 
-The rows that are equal to the user_input variable are then added to a new list and returned.
+If the row is equal to the user_input variable, then add the row to a new list and return it.
 
 __Make sure that you use the .upper() method before doing the comparison to make sure that capitalization doesn't matter__
 
@@ -66,71 +66,54 @@ GIVEN: user_input = APIS
 RETURN: [['SOLITARY', 'Apis', 1, 2, 3],
          ['SOLITARY', 'Apis', 1, 2, 3]]
 ```
-## Step 2: calc_averages(filtered_data)
+## Step 3: calc_averages(filtered_data)
 
-Given the filtered data from the earlier step as a parameter to this function,
+Given the filtered_data from **Step 2**, you are going to calculate and return the average for each one of the 3 following columns in the table :
 
-calculate and return the average for three different columns of the table
+- the Imidacloprid concentration (parts per billion).
 
-- the Imidacloprid concentration (parts per billion), 
-
-- bee longevity in bioassay (days), 
+- bee longevity in bioassay (days).
 
 - and days paralyzed.
 
-Return these three values in a tuple with the form (concentration, longevity, days).
+Return these three values in a tuple with the form (average concentration, average longevity, average days).
 
-__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
-### Step 3: calc_average(data, column_index)
-This is a recommended helper function that you can use to find an average for a single column, doing this function would help you with the earlier function.
+__We recommend you complete this using the helper function calc_average(data, column_index) described below as it will make your life easier, however it can be completed without it.__
 
-The function takes two parameters, the data you want to look through and the index of the column that you want the average of.
+calc_average(data, column_index) : The function takes two parameters, the data you want to look through and the index of the column that you want the average of, then finds the average value in that column.
 
-Then it finds the average value in that column.
+## Step 4: calc_minimums(filtered_data)
 
-## Step 3: calc_minimums(filtered_data)
+Given the filtered_data from **Step 2**, yoou are going to calculate and return the minimum for each one of the 3 following columns in the table :
 
-Given the filtered data from the earlier step as a parameter to this function,
+- the Imidacloprid concentration (parts per billion).
 
-calculate and return the minimum for three different columns of the table,
-
-- the Imidacloprid concentration (parts per billion), 
-
-- bee longevity in bioassay (days), 
+- bee longevity in bioassay (days). 
 
 - and days paralyzed.
 
-Return these three values in a tuple with the form (concentration, longevity, days).
-__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
+Return these three values in a tuple with the form (minimum concentration, minimum longevity, minimum days).
 
-### Step 3: calc_minimum(data, column_index)
-This is a recommended helper function that you can use to find an minimum value for a single column, doing this function would help you with the earlier function.
+__We recommend you complete this using the helper function calc_minimum(data, column_index) described below as it will make your life easier, however it can be completed without it.__
 
-The function takes two parameters, the data you want to look through and the index of the column that you want the minimum of.
+calc_minimum(data, column_index) : The function takes two parameters, the data you want to look through and the index of the column that you want the minimum of, then finds the minimum value in that column.
 
-Then it finds the minimum value in that column.
+## Step 5: calc_maximums(filtered_data)
 
-## Step 4: calc_maximums(filtered_data)
+Given the filtered_data from **Step 2**, yoou are going to calculate and return the maximum for each one of the 3 following columns in the table :
 
-Given the filtered data from the earlier step as a parameter to this function, 
+- the Imidacloprid concentration (parts per billion).
 
-calculate and return the maximum for three different columns of the table,
-
-- the Imidacloprid concentration (parts per billion),
-
-- bee longevity in bioassay (days),
+- bee longevity in bioassay (days).
 
 - and days paralyzed.
 
-Return these three values in a tuple with the form (concentration, longevity, days).
-__We recommend you complete this using the helper function described below as it will make your life easier, however it can be completed without it.__
+Return these three values in a tuple with the form (maximum concentration, maximum longevity, maximum days).
 
-### Step 5: calc_maximum(data, column_index)
-This is a recommended helper function that you can use to find an maximum value for a single column, doing this function would help you with the earlier function.
+__We recommend you complete this using the helper function calc_maximum(data, column_index) described below as it will make your life easier, however it can be completed without it.__
 
-The function takes two parameters, the data you want to look through and the index of the column that you want the maximum of.
+calc_maximum(data, column_index) : The function takes two parameters, the data you want to look through and the index of the column that you want the maximum of, then finds the maximum value in that column.
 
-Then it finds the maximum value in that column.
 ## Step 6: print_stats(user_input, stat_type, stats)
 
 This function takes the user’s input, the type of statistic you are printing, and the statistics that will be printed. The statistics should show 2 decimal places.
@@ -144,7 +127,8 @@ Average Days Paralyzed: 1.26
 ```
 
 ## Step 7: finish run(data)
- should start by asking for input. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. This method should return True if it needs to be run again (there are two cases where this needs to occur) and return False if it does not need to run again.
+
+should start by asking for input. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. This method should return True if it needs to be run again (there are two cases where this needs to occur) and return False if it does not need to run again.
  
  When asking for input, prompt the user with this sentence: “Enter the species/genus or the sociality of bee you would like information about: “
 
