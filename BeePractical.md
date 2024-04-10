@@ -7,20 +7,28 @@ As you work through this program, don't be intimidated by its size!<br>These ins
 #### The columns in the data are in order:
 
 - 0 - Level of Sociality : indicates whether a bee is social or solitary.
-- 1 - bee genus/species : indicates the genus or species of the bee.
-- 2 - Imidacloprid concentration (parts per billion) : indicates the concentration of insecticide used.
-- 3 - bee longevity in bioassay (days) : indicates the number of days the bee survived.
-- 4 - days paralyzed : indicates the number of days the bee was paralyzed.
+- 1 - Degree of floral specialization
+- 2 - Habitat floral host
+- 3 - bee species
+- 4 - bee genus/species
+- 5 - Date bee captured and installed in bioassay unit (Julian day)
+- 6 - bee sex
+- 7 - Imidacloprid concentration (parts per billion)
+- 8 - bee longevity in bioassay (days)
+- 9 - days paralyzed
+- 10 - days active
+- 11 - % of days bee is paralyzed
 
 #### This is an example of how data is stored in the CSV file:
+| Level of Sociality | Degree of floral specialization | Habitat floral host | Bee species | Bee genus/species | Date bee captured and installed in bioassay unit (Julian day) | Bee sex | Imidacloprid concentration (parts per billion) | Bee longevity in bioassay (days) | Days paralyzed | Days active | % of days bee is paralyzed |
+|--------------------|---------------------------------|---------------------|-------------|-------------------|-------------------------------------------------------------|---------|----------------------------------------------|-----------------------------------|----------------|--------------|-----------------------------|
+| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 277                                                         | F       | 20                                           | 5                                 | 0              | 5            | 0                           |
+| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 279                                                         | F       | 100                                          | 3                                 | 3              | 0            | 100                         |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 1                                 | 0              | 1            | 0                           |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 3                                 | 0              | 3            | 0                           |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 4                                 | 0              | 3            | 0                           |
+| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 5                                 | 1              | 4            | 20                          |
 
-| Level of Sociality | Bee genus/species | Imidacloprid concentration (parts per billion) | Bee longevity in bioassay (days) | Days paralyzed |
-|:-------------------:|:-------------------:|:---------------------------------------------:|:------------------------------------:|:----------------:|
-| SOLITARY           | ANDRENA           | 20                                          | 5                                  | 0              |
-| SOLITARY           | ANDRENA           | 100                                         | 3                                  | 3              |
-| SOLITARY           | APIS              | 0                                           | 1                                  | 0              |
-| SOLITARY           | APIS              | 0                                           | 3                                  | 0              |
-| SOLITARY           | APIS              | 0                                           | 4                                  | 0              |
 
 
 ## main.py
@@ -128,24 +136,13 @@ Average Days Paralyzed: 1.26
 
 ## Step 7: finish run(data)
 
-should start by asking for input. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. This method should return True if it needs to be run again (there are two cases where this needs to occur) and return False if it does not need to run again.
+The first thing the run function needs to do *only once* is to ask for the name of the file that the data will be read from. This should not be repeated with the rest of the loop you will create.
+
+Your loop should start by asking for input. This user input will be the name of the species or genus or the level of sociality that the data will be filtered by. Then, filter the data and perform a check to make sure the input was valid (make sure you have data to work with). Next, calculate and print the averages, minimums, and maximums. Finally, ask the user if would like to see more data. If the user inputs 'Y' the loop should continue to execute and if the input is 'N' the loop should stop executing.
  
- When asking for input, prompt the user with this sentence: “Enter the species/genus or the sociality of bee you would like information about: “
+When asking for input, prompt the user with this sentence: “Enter the species/genus or the sociality of bee you would like information about: “
 
 When asking if the user would like to see more data, prompt the user by asking: “Would you like to see more data? (Y/N) “
-
-## main()
-
-This function will be provided for you in order to keep the structure consistent for everyone.
-```python3
-def main():
-    if len(sys.argv) != 2:
-        print('Invalid arguments given')
-        return
-    data = read(sys.argv[1])
-    while run(data):
-        continue
-```
 
 ## Example outputs
 ### Example given genus (Apis):
