@@ -4,30 +4,36 @@ For this assignment, you will be reading and filtering CSV data focused on the e
 
 As you work through this program, don't be intimidated by its size!<br>These instructions break the work you have to do into manageable chunks, so just work one step at a time, reading the instructions thoroughly and thinking through how you will go about coding each function.
 
+* **The data for this project is stored in "BEETOX_updated.csv"**
+
 #### The columns in the data are in order:
 
-- 0 - Level of Sociality : indicates whether a bee is social or solitary.
-- 1 - Degree of floral specialization
-- 2 - Habitat floral host
-- 3 - bee species
-- 4 - bee genus/species
-- 5 - Date bee captured and installed in bioassay unit (Julian day)
-- 6 - bee sex
-- 7 - Imidacloprid concentration (parts per billion)
-- 8 - bee longevity in bioassay (days)
-- 9 - days paralyzed
-- 10 - days active
-- 11 - % of days bee is paralyzed
+- 0 - Index in the file
+- 1 - Level of Sociality : indicates whether a bee is social or solitary.
+- 2 - bee genus/species
+- 3 - Imidacloprid concentration (parts per billion)
+- 4 - bee longevity in bioassay (days)
+- 5 - days paralyzed
 
-#### This is an example of how data is stored in the CSV file:
-| Level of Sociality | Degree of floral specialization | Habitat floral host | Bee species | Bee genus/species | Date bee captured and installed in bioassay unit (Julian day) | Bee sex | Imidacloprid concentration (parts per billion) | Bee longevity in bioassay (days) | Days paralyzed | Days active | % of days bee is paralyzed |
-|--------------------|---------------------------------|---------------------|-------------|-------------------|-------------------------------------------------------------|---------|----------------------------------------------|-----------------------------------|----------------|--------------|-----------------------------|
-| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 277                                                         | F       | 20                                           | 5                                 | 0              | 5            | 0                           |
-| SOLITARY           | OLIGOLECTIC                     | SUNFLOWER           | Andrena accepta | ANDRENA           | 279                                                         | F       | 100                                          | 3                                 | 3              | 0            | 100                         |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 1                                 | 0              | 1            | 0                           |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 3                                 | 0              | 3            | 0                           |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 4                                 | 0              | 3            | 0                           |
-| SOLITARY           | POLYLECTIC                      | HIVE                | Apis mellifera | APIS              | 337                                                         | F       | 0                                            | 5                                 | 1              | 4            | 20                          |
+
+| Index | Level of Sociality | Bee Genus/Species | Imidacloprid Concentration (ppb) | Bee Longevity in Bioassay (days) | Days Paralyzed |
+|-------|--------------------|-------------------|----------------------------------|----------------------------------|----------------|
+| 0     | SOLITARY           | ANDRENA           | 20                               | 5                                | 0              |
+| 1     | SOLITARY           | ANDRENA           | 100                              | 3                                | 3              |
+| 2     | SOLITARY           | APIS              | 0                                | 1                                | 0              |
+| 3     | SOLITARY           | APIS              | 0                                | 3                                | 0              |
+| 4     | SOLITARY           | APIS              | 0                                | 4                                | 0              |
+| 5     | SOLITARY           | APIS              | 0                                | 5                                | 1              |
+| 6     | SOLITARY           | APIS              | 0                                | 8                                | 0              |
+| 7     | SOLITARY           | APIS              | 0                                | 8                                | 0              |
+| 8     | SOLITARY           | APIS              | 0                                | 10                               | 0              |
+| 9     | SOLITARY           | APIS              | 0                                | 11                               | 0              |
+| 10    | SOLITARY           | APIS              | 5                                | 5                                | 2              |
+| 11    | SOLITARY           | APIS              | 5                                | 8                                | 3              |
+| 12    | SOLITARY           | APIS              | 5                                | 10                               | 3              |
+| 13    | SOCIAL             | APIS              | 5                                | 10                               | 4              |
+| 14    | SOCIAL             | APIS              | 5                                | 11                               | 0              |
+
 
 
 
@@ -185,7 +191,7 @@ Test not found. Please enter valid Sociality or Species/Genus
 ## Conclusion
 
 This reaches the end of what is required of your coding practical, however, after submitting, if you'd like to use python to investigate your data further, you are highly encouraged to do so!
-If you would like to expand upon your data analysis, there are many different things you could look for. Examples are:
+If you would like to expand upon your data analysis you can load in the expanded data set instead by simply entering "BEETOX.csv", there are many different things you could look for. Examples are:
 
 - Floral host differences across averages
 - Sex differences across averages
