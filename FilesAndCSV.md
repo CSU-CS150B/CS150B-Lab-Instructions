@@ -1,4 +1,4 @@
-# Lab 07 - Files and CSV
+# Lab 09 - Files and CSV
 
 ## Introduction
 Working with files is essential to all programs, as files are how we hold information for the programs. As such, learning to read files is essential to programming.
