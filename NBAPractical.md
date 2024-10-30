@@ -28,9 +28,9 @@ def main():
     # Your work starts here
 ```
 This function is the starting point for the entire project and the code provided just gets you started. Most of it should be familar to you but a couple lines may seem kind of strange. Lets work through them to understand.
-* user_team = input("Enter your favorite team: ")* : this line is getting the name of the team that the user whats to view data for.
-* print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]")* : this line prints the options of the different statistics the user can select.
-* stat_type = input("Chose stat: ")* : this line gets the statistic from the user.
+* user_team = input("Enter your favorite team: ") : this line is getting the name of the team that the user whats to view data for.
+* print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
+* stat_type = input("Chose stat: ") : this line gets the statistic from the user.
 
 - What is input_handler?
   *input_handler* is a dictionary that conatins the indices at which all the different statistics that we will be exploring through this project are stored. You shouldn't worry about this to much, just treat the index you get from it as you would any other index. It just allows you code to handle the different output possiblities.
