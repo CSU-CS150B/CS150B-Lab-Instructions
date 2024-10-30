@@ -31,6 +31,7 @@ This function is the starting point for the entire project and the code provided
 * user_team = input("Enter your favorite team: ") : this line is getting the name of the team that the user whats to view data for.
 * print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
 * stat_type = input("Chose stat: ") : this line gets the statistic from the user.
+The *main()* function is started for you but not completed for you.
 
 ```
 input_handler = {
@@ -119,7 +120,7 @@ We use using integer(or floor) divsion *//* so that we get back a whole number f
 "{lowest_player[index_name]} has the lowest {stat_type} accuracy at {lowest_player[index_stat]}"
 "He is {highest_player[index_age]} which is {younger/equal/older than average}."
 ```
-There are two helper functions in the templete for this step which are not strictly neccessary but highly recomended to make your code much more readable and therefore debuggable. The first is *compare_age()* which takes in  the teams average age and the players age and returns a string based on how old the player is in comparision to the average. 
+There are two helper functions in the templete for this step which are not strictly neccessary but highly recommended to make your code much more readable and therefore debuggable. The first is *compare_age()* which takes in  the teams average age and the players age and returns a string based on how old the player is in comparision to the average. 
 ```
 if greater than average
   return "is older than average"
@@ -128,7 +129,7 @@ elif equal to average
 else
   return "is younger than average"
 ```
-This function while save you from having to write the same condidtionals over and over again and is highly recomeded. 
+This function will save you from having to write the same condidtionals over and over again and is highly recomeded. 
 
 The next helper function is *print_info()* which print out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
 Finally *print_stats()* should be the main function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
