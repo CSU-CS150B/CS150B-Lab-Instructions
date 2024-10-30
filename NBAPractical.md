@@ -9,7 +9,7 @@ He is 24 which is younger than average.
 Carlik Jones has the lowest 3 point accuracy at 0.0
 He is 24 which is younger than average.
 ```
-### What the heck is all this code:
+### What is all this code:
 Lets walk through all the code that we have provided to start you out on this project starting with the main function:
 ```
 def main():
