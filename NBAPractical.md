@@ -66,7 +66,7 @@ So the elements in the 0th postition of every list form the column:
 ### Step 2 - Filtering the data:
 The next step is filtering the data to return a filtered dataset that contains only the values for players of a certain team.
 This function has two parameters: *Team_Name* which contains the name of the teams that you will be filtering by and *data* which contains the data you read in the last step.
-The first thing to do is to find the index at which the team is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. I recomend using the global variables that I have left commented out on the top of the page. 
+The first thing to do is to find the index at which the team is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. It is recomended to use global variables that have been left commented out on the top of the page. 
 ```
 # index_name = ?
 # index_age = ?
