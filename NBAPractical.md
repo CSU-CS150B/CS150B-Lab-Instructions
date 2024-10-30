@@ -31,6 +31,7 @@ This function is the starting point for the entire project and the code provided
 * user_team = input("Enter your favorite team: ") : this line is getting the name of the team that the user whats to view data for.
 * print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
 * stat_type = input("Chose stat: ") : this line gets the statistic from the user.
+  
 The *main()* function is started for you but not completed for you.
 
 ```
