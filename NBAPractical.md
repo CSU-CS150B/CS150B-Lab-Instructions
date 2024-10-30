@@ -32,7 +32,7 @@ This function is the starting point for the entire project and the code provided
 * print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
 * stat_type = input("Chose stat: ") : this line gets the statistic from the user.
 
-- What is input_handler?
+What is input_handler?
   *input_handler* is a dictionary that conatins the indices at which all the different statistics that we will be exploring through this project are stored. You shouldn't worry about this to much, just treat the index you get from it as you would any other index. It just allows you code to handle the different output possiblities.
 
 ### Step 1 - Reading the CSV:
