@@ -132,6 +132,7 @@ else
 ```
 This function will save you from having to write the same condidtionals over and over again and is highly recomeded. 
 
-The next helper function is *print_info()* which print out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
-Finally *print_stats()* should be the main function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
+The next helper function is *print_info()* which prints out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
+
+Finally *print_stats()* is a vital function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
 
