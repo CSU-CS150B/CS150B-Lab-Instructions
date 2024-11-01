@@ -65,14 +65,14 @@ Given a specific filter, find the minimum temperature.
 ## Step 6 - run()
 Now is the time to build this into a working program! In the run function, you will load the data from Temperatures.csv into a variable, and also get the value from client_input(). Using both values, you will call average_temperature(), maximum_temperature(), and minimum_temperature(). The output will be formatted as follows (here are a few examples):
 ```
-Please enter a filter: Dec
-Average Temperature for Dec: 28.10
-Maximum Temperature for Dec: 66.30
-Minimum Temperature for Dec: -14.90
-Please enter a filter: 2
-Average Temperature for 2015: 50.89
-Maximum Temperature for 2015: 94.30
-Minimum Temperature for 2015: -1.40
+Please enter a filter: 2022-03-15
+Average Temperature for 2022-03-15: 47.20
+Maximum Temperature for 2022-03-15: 67.40
+Minimum Temperature for 2022-03-15: 28.30
+Please enter a filter: 2023
+Average Temperature for 2023: 50.47
+Maximum Temperature for 2023: 97.80
+Minimum Temperature for 2023: -12.10
 ```
 ## Reference
 Fort Collins Weather Station, Fort Collins Weather Station Data Access, Colorado State University, Fort Collins Colorado. [http://ccc.atmos.colostate.edu/~autowx/fclwx_access.php. Accessed 2016](https://climate.colostate.edu/~autowx/fclwx_access.php).
