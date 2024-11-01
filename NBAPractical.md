@@ -9,7 +9,7 @@ He is 24 which is younger than average.
 Carlik Jones has the lowest 3 point accuracy at 0.0
 He is 24 which is younger than average.
 ```
-### What the heck is all this code:
+### What is all this code:
 Lets walk through all the code that we have provided to start you out on this project starting with the main function:
 ```
 def main():
@@ -28,12 +28,22 @@ def main():
     # Your work starts here
 ```
 This function is the starting point for the entire project and the code provided just gets you started. Most of it should be familar to you but a couple lines may seem kind of strange. Lets work through them to understand.
-*user_team = input("Enter your favorite team: ")* : this line is getting the name of the team that the user whats to view data for.
-*print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]")* : this line prints the options of the different statistics the user can select.
-*stat_type = input("Chose stat: ")* : this line gets the statistic from the user.
+* user_team = input("Enter your favorite team: ") : this line is getting the name of the team that the user whats to view data for.
+* print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
+* stat_type = input("Chose stat: ") : this line gets the statistic from the user.
+  
+The *main()* function is started for you but not completed for you.
 
-- What is input_handler?
-  *input_handler* is a dictionary that conatins the indices at which all the different statistics that we will be exploring through this project are stored. You shouldn't worry about this to much, just treat the index you get from it as you would any other index. It just allows you code to handle the different output possiblities.
+```
+input_handler = {
+    "field goal": 10,
+    "3 point": 13,
+    "2 point": 16,
+    "free throw": 20
+}
+```
+What is input_handler at the top of the program?
+  * input_handler is a dictionary that conatins the indices at which all the different statistics that we will be exploring through this project are stored. You shouldn't worry about this to much, just treat the index you get from it as you would any other index. It just allows you code to handle the different output possiblities.
 
 ### Step 1 - Reading the CSV:
 To begin the project you should start by writing the read_csv() function. The function takes in a string which contains a path to the CSV file location and returns a list of lists.
@@ -56,7 +66,7 @@ So the elements in the 0th postition of every list form the column:
 ### Step 2 - Filtering the data:
 The next step is filtering the data to return a filtered dataset that contains only the values for players of a certain team.
 This function has two parameters: *Team_Name* which contains the name of the teams that you will be filtering by and *data* which contains the data you read in the last step.
-The first thing to do is to find the index at which the team is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. I recomend using the global variables that I have left commented out on the top of the page. 
+The first thing to do is to find the index at which the team is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. It is recomended to use global variables that have been left commented out on the top of the page. 
 ```
 # index_name = ?
 # index_age = ?
@@ -111,7 +121,7 @@ We use using integer(or floor) divsion *//* so that we get back a whole number f
 "{lowest_player[index_name]} has the lowest {stat_type} accuracy at {lowest_player[index_stat]}"
 "He is {highest_player[index_age]} which is {younger/equal/older than average}."
 ```
-There are two helper functions in the templete for this step which are not strictly neccessary but highly recomended to make your code much more readable and therefore debuggable. The first is *compare_age()* which takes in  the teams average age and the players age and returns a string based on how old the player is in comparision to the average. 
+There are two helper functions in the templete for this step which are not strictly neccessary but highly recommended to make your code much more readable and therefore debuggable. The first is *compare_age()* which takes in  the teams average age and the players age and returns a string based on how old the player is in comparision to the average. 
 ```
 if greater than average
   return "is older than average"
@@ -120,8 +130,9 @@ elif equal to average
 else
   return "is younger than average"
 ```
-This function while save you from having to write the same condidtionals over and over again and is highly recomeded. 
+This function will save you from having to write the same condidtionals over and over again and is highly recomeded. 
 
-The next helper function is *print_info()* which print out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
-Finally *print_stats()* should be the main function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
+The next helper function is *print_info()* which prints out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
+
+Finally *print_stats()* is a vital function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
 
