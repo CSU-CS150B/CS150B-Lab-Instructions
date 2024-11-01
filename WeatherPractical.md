@@ -5,9 +5,9 @@ Weather in Fort Collins is great. Except for when it’s not. This dataset conta
 ## Introduction
 In this practical you will be extracting data from a csv file with data about temperatures and wind speeds at certain dates and times.
 
-The Temperatures.csv dataset is split into the following four columns:
+The Weather_Data.csv dataset is split into the following four columns:
 
-* Date - The date when the data was recorded. Formatted day-month-year (ex. “10-Jun-2010”)
+* Date - The date when the data was recorded. Formatted year-month-day (ex. “2022-03-01”)
 
 * Time - The time when the data was recorded. Formatted in 24-hour time (ex. “16:21”)
 
@@ -69,7 +69,7 @@ Please enter a filter: Dec
 Average Temperature for Dec: 28.10
 Maximum Temperature for Dec: 66.30
 Minimum Temperature for Dec: -14.90
-Please enter a filter: 2015
+Please enter a filter: 2
 Average Temperature for 2015: 50.89
 Maximum Temperature for 2015: 94.30
 Minimum Temperature for 2015: -1.40
