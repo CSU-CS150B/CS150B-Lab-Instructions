@@ -9,6 +9,11 @@ He is 24 which is younger than average.
 Carlik Jones has the lowest 3 point accuracy at 0.0
 He is 24 which is younger than average.
 ```
+### Understanding the data:
+Before you start coding, it is highly recommended that you download the dataset and develop an understanding of the data we’ll be working with. Pay attention to which columns might be important for this project. Also, note that the dataset uses abbreviations for team names. Here is a list of the team abbreviations if you want to test your code on a specific team.
+
+https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations
+
 ### What is all this code?:
 Lets walk through all the code that we have provided to start you out on this project starting with the main function:
 ```
