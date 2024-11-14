@@ -98,11 +98,12 @@ def best_player
   highest = 0
   player = []
   for row in filtered data
-    if float(row[index_stat]) > highest 
+    if float(row[index_stat]) >= highest 
       then highest should be set equal to float(row[index_stat])
       player = row
   return player
 ```
+Remeber to include *>=* or *<=* or your answers will not be correct.
 You may be suprised that we are returning a list instead of a single value from the is function but this is because we can use this list to represent a single player which has multiple atributes so that we can find other information about the player such as age later on.
 
 To find the worst player you should use a similar approach but you should set the value you are comparing to to something impossibly large such as 1,000,000 and then replace it if the value from the dataset is smaller than it.
