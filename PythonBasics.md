@@ -105,10 +105,11 @@ gives the same output:
 Note: I had to convert age to a string in the second method because the + sign ‘adds’ (concatenates) the strings together to make one whole string. Since age is an int, you can’t add an int to string. You will learn more about this in step 4.
 
 Your total output should now be:
-
+```
 Hello World!
 This is my first print statement!
 The elephant is gray.
+```
 
 ## User Input (Step 3)
 This next step is about user input.
