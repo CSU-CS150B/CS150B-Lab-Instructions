@@ -1,19 +1,21 @@
 # Lab 01: All About Functions Lab
 ## Defining a function guide (Step 0.5)
 Before we start grading lets quickly go over how to define a function in Python. A function is a reusable block of code which you can *call* to run the code contained within it.
-The first line of a function defintion will always include the keyword *def* then the name of the function a set of parethesis *()* and a colon at the end of the line. Inside the paranthesis you can also include optional parameters which are variables that can be passed into the function.
+
+**Definition:** Start with the *def* keyword, followed by the function name, parentheses *()*, and a colon *:*. Parameters (inputs) can be declared inside the parentheses.
 ```
-def *name of function*(*parameters*):
+def function_name(parameter1, parameter2):  
 ```
-Next is the body of the function which will contain the code we want to execute whenever the function is called. This code must be indented to be considered part of the function. The function body can end with a return statement which will return a value back to whereever the function was called from.
+**Body:** The indented code block under the definition. Use *return* to send a value back to the caller. If omitted, the function returns *None*.
 ```
-def example_function(var1, var2):
-    answer = var1 + var2
+def add_numbers(num1, num2):
+    answer = num1 + num2
     return answer
 ```
-Lastly there is the function call which is the code that activates the function we have just written. This code calls the example function above with the numbers 3 and 5 passed as parameters.
+**Calling the Function:** Activate the function by using its name with arguments (values for parameters).
 ```
-print(example_function(3, 5))
+sum_result = add_numbers(3, 5)  # num1 = 3 and num2 = 5
+print(sum_result)  # Output: 8  
 ```
 
 ## Creating your own print statement (Step 1)
