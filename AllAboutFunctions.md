@@ -2,7 +2,7 @@
 ## Defining a function guide (Step 0.5)
 Before we start grading lets quickly go over how to define a function in Python. A function is a reusable block of code which you can *call* to run the code contained within it.
 
-**Definition:** Start with the *def* keyword, followed by the function name, parentheses *()*, and a colon *:*. Parameters (inputs) can be declared inside the parentheses.
+**Definition:** Start with the *def* keyword, followed by the function name, parentheses *()*, and a colon *:* and parameters (inputs) can be declared inside the parentheses.
 ```
 def function_name(parameter1, parameter2):  
 ```
