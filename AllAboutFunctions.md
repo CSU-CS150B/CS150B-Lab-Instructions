@@ -101,7 +101,7 @@ In this step we will be combining everything we’ve learned so far.
 2. Within that function, create an int variable called cost and assign it to equal 6.
 3. Then ask the user for input asking “What flavor would you like? => “ and store their answer in a variable called flavor. Hint: If you don’t remember user input, look back at lab 00.
 4. Next return a statement stating “The **flavor** will cost **cost** dollars.” replacing flavor and cost with your two variables you created.
-*Hint: Follow the same format as how you coded your print statement in lab 00.*
+*Hint: Follow the same format as how you coded your print statement in lab 2.*
 
 *Hint: Use casting to cast cost from an int to a string or else it won’t return properly. (An error will occur)*
 
