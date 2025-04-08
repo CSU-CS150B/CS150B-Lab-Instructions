@@ -1,54 +1,76 @@
 # NBA dataset Practical Project - CS150B
-The goal this practical project is to build an application that will read through a dataset that contains the preformance of every NBA player for a single season and display information about a given team depending on input given by the user. Given team name "DEN" and stat type "Free Throw" the output of your program should look like:
+The goal this practical project is to build an application that will read through a dataset that contains the preformance of every NBA player for a single season and create the opitmal team based on a parameter given by the user. Given an input of 1 the output of your program should look like:
 
 ```
-Stats for the NBA team: DEN
-The average age of the players is 26.
-Vlatko Čančar has the highest 3 point accuracy at 0.583
-He is 24 which is younger than average.
-Carlik Jones has the lowest 3 point accuracy at 0.0
-He is 24 which is younger than average.
+Select a team-building strategy:
+1. Scoring (prioritize Points)
+2. Rebounding (prioritize Rebounds)
+3. Playmaking (prioritize Assists)
+4. Custom (student defined)
+Enter your choice (1-3): 1
+
+=== MY DREAM TEAM ===
+POSITION PLAYER                    PTS   REB   AST
+--------------------------------------------------
+C     Joel Embiid               30.6  2.1   4.2
+PF    Giannis Antetokounmpo     29.9  2     5.8
+SG    Devin Booker              26.8  0.7   4.8
+PG    Luka Dončić               28.4  0.9   8.7
+SF    LeBron James              30.3  1.1   6.2
+--------------------------------------------------
+TEAM RATING: 221.3
 ```
 ### Understanding the data:
 Before you start coding, it is highly recommended that you download the dataset and develop an understanding of the data we’ll be working with. Pay attention to which columns might be important for this project. Also, note that the dataset uses abbreviations for team names. Here is a list of the team abbreviations if you want to test your code on a specific team.
 
 https://en.wikipedia.org/wiki/Wikipedia:WikiProject_National_Basketball_Association/National_Basketball_Association_team_abbreviations
 
-### What is all this code?:
-Lets walk through all the code that we have provided to start you out on this project starting with the main function:
-```
-def main():
-    # Get user input
-    user_team = input("Enter your favorite team: ")
-    print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]")
-    stat_type = input("Chose stat: ")
-    
-    # This code handles changing the index based on the users input
-    global index_stat
-    index_stat = input_handler.get(stat_type.lower())
-    if index_stat is None or index_stat < 0:
-        print("Invalid stat type.")
-        return -1
-    
-    # Your work starts here
-```
-This function is the starting point for the entire project and the code provided just gets you started. Most of it should be familar to you but a couple lines may seem kind of strange. Lets work through them to understand.
-* user_team = input("Enter your favorite team: ") : this line is getting the name of the team that the user whats to view data for.
-* print("Stat types: [Free Throw | Field Goal | 3 Point | 2 Point]") : this line prints the options of the different statistics the user can select.
-* stat_type = input("Chose stat: ") : this line gets the statistic from the user.
-  
-The *main()* function is started for you but not completed for you.
+The project also deals heavily with player positions so here is a guide to the abreviations used.
+| Position | Abbreviation |
+|----------|--------------|
+| Point Guard | PG |
+| Shooting Guard | SG |
+| Small Forward | SF |
+| Power Forward | PF |
+| Center | C |
 
+### What is all this code?:
+Lets walk through all the functions that you will have to implement to complete this project:
 ```
-input_handler = {
-    "field goal": 10,
-    "3 point": 13,
-    "2 point": 16,
-    "free throw": 20
-}
+
+1. read_csv(filename)
+   - Reads NBA player data from a CSV file
+   - Returns data rows and header
+
+2. filter_data(data, position)
+   - Filters player data to only include players of a specific position
+   - Returns filtered dataset
+
+3. find_max(data, stat_index)
+   - Finds the player with the highest value for a given statistic
+   - Returns the best performing player's data
+
+4. build_team(data, team_template)
+   - Creates optimal team based on specified statistics for each position
+   - Uses filter_data and find_max for each position
+   - Returns complete team dictionary
+
+5. calculate_team_rating(team)
+   - Sums player ratings from the team
+   - Returns total team rating
+
+6. print_team(team)
+   - Displays formatted team information and rating
+
+7. get_user_strategy()
+   - Gets user input for team-building strategy
+   - Returns dictionary with position-statistic mappings
+
+8. main()
+   - Coordinates program execution
+   - Calls other functions in sequence
+    
 ```
-What is input_handler at the top of the program?
-  * input_handler is a dictionary that conatins the indices at which all the different statistics that we will be exploring through this project are stored. You shouldn't worry about this to much, just treat the index you get from it as you would any other index. It just allows you code to handle the different output possiblities.
 
 ### Step 1 - Reading the CSV:
 To begin the project you should start by writing the read_csv() function. The function takes in a string which contains a path to the CSV file location and returns a list of lists.
@@ -70,12 +92,12 @@ So the elements in the 0th postition of every list form the column:
 ```
 ### Step 2 - Filtering the data:
 The next step is filtering the data to return a filtered dataset that contains only the values for players of a certain team.
-This function has two parameters: *Team_Name* which contains the name of the teams that you will be filtering by and *data* which contains the data you read in the last step.
-The first thing to do is to find the index at which the team is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. It is recomended to use global variables that have been left commented out on the top of the page. 
+This function has two parameters: *data* which contains the data you read in the last step and *postion* which is the position you will be filtering for.
+The first thing to do is to find the index at which the player position is located and store this information somewhere. The rest of the project will be much easier if you don't have to keep going back to the dataset to remember which values are stored where. It is recomended to use global variables on the top of the page. If you are struggling to figure out the indices try printing out the header which is returned from the *read_csv* function with the data to see way data is stored in each column.
 ```
-# index_name = ?
-# index_age = ?
-# index_team = ?
+# index_position = ?
+# index_pts = ?
+# index_ast = ?
 ```
 By storing the index of age in this variable you can simply type *index_team* whenever you are trying to access the team for a given player.
 Once you've done this the general structure of the function should be:
@@ -83,62 +105,113 @@ Once you've done this the general structure of the function should be:
 # THIS IS PSEUDOCODE IT WILL NOT RUN
 def filter_data
   for row in data
-    if row[index_team] is equal to *Team_Name* add it to the filtered dataset.
+    if row[index_postion] is equal to *position argument* add it to the filtered dataset.
 ```
 If you are struggling with this part please look back at your CSV Lab as much of what you learned in that lab applies to the first 2 steps of this project.
 
-### Step 3 - Finding Best & Worst Players:
-The next step finding the players on the team who preform the best and the worst in the given area by writing the functions *find_best_player()* and *find_worst_player()*. Both functions take in two arguments, *data* which is the dataset filtered by team and index which is the index of the statistic in which we are interested. 
+### Step 3 - Finding Best Player:
 
-This is the first section in which we will be using the *index_stat* variable that we discussed at the start of the instructions. Remeber that *index_stat* is just a variable that stores a number that represents the index of the stat that you selected at the start of the lab. You should use it whenever you need to access the statitistic because if you do not your output will not change when the users inputs different values.
+The `find_max()` function identifies the player with the highest value for a specific statistic. This function requires two parameters:
+- `data`: The filtered dataset containing players of a specific position
+- `stat_index`: The column index of the statistic we want to maximize
 
-The general algorithm for finding the best player is:
+The function implements a straightforward maximum-finding algorithm:
+
+1. It initializes `max_player` with the first player in the dataset
+2. It iterates through each player in the dataset
+3. It compares the current player's statistic with the current maximum
+4. If the current player's statistic is **greater than** the current maximum, this player becomes the new maximum
+
+```python
+#THIS IS PSEUDOCODE IT WILL NOT RUN
+max_player = data[0]
+# Loop through each player in the filtered data
+for each row in data:
+    # Compare current player's stat with maximum player's stat
+    # CRITICAL: Must use > comparison for correct results
+    if (row stat) > (max_player stat):
+        # Update maximum player when better one is found
+        max_player = row
+        
+# Return the entire player record, not just the value
+return max_player
 ```
-def best_player
-  highest = 0
-  player = []
-  for row in filtered data
-    if float(row[index_stat]) >= highest 
-      then highest should be set equal to float(row[index_stat])
-      player = row
-  return player
-```
-Remeber to include *>=* or *<=* or your answers will not be correct.
-You may be suprised that we are returning a list instead of a single value from the is function but this is because we can use this list to represent a single player which has multiple atributes so that we can find other information about the player such as age later on.
 
-To find the worst player you should use a similar approach but you should set the value you are comparing to to something impossibly large such as 1,000,000 and then replace it if the value from the dataset is smaller than it.
+### Step 4 - Building the Team:
 
-### Step 4 - Average age:
-For this step we will be calculating the average age of all the players on the team. This function takes in one input *data* which is the filtered dataset and returns and interger. 
-The first thing to to as always is to find the index of the players age in the dataset and then store it somewhere.
-Average age should be calculated as: 
-```
-average_age = sum_of_team_ages // number_of_players
-```
-We use using integer(or floor) divsion *//* so that we get back a whole number for age.
+The `build_team()` function assembles the optimal basketball team by finding the best player for each position based on specified statistics. This function takes two arguments:
+- `data`: The complete dataset of all players
+- `team_template`: A dictionary that maps positions to statistical indices for selection
 
-### Step 5 - Printing stats:
-  For this step you are printing out the info about a given team base on the parameters provided by the user.
-  ```
-"Stats for the NBA team: {team_name}"
-"The average age of the players is {average_age}"
-"{highest_player[index_name]} has the highest {stat_type} accuracy at {highest_player[index_stat]}"
-"He is {highest_player[index_age]} which is {younger/equal/older than average}."
-"{lowest_player[index_name]} has the lowest {stat_type} accuracy at {lowest_player[index_stat]}"
-"He is {highest_player[index_age]} which is {younger/equal/older than average}."
-```
-There are two helper functions in the templete for this step which are not strictly neccessary but highly recommended to make your code much more readable and therefore debuggable. The first is *compare_age()* which takes in  the teams average age and the players age and returns a string based on how old the player is in comparision to the average. 
-```
-if greater than average
-  return "is older than average"
-elif equal to average
-  return "is the average age"
-else
-  return "is younger than average"
-```
-This function will save you from having to write the same condidtionals over and over again and is highly recomeded. 
+The function works by:
 
-The next helper function is *print_info()* which prints out the info for a given player so that you do not have to rewrite the same code twice for the higest and lowest players.
+1. Initializing an empty team dictionary with all five basketball positions (PG, SG, SF, PF, C) set to None
+2. Iterating through each position-statistic pair in the team_template
+3. For each position:
+   - Filtering the dataset to only include players of that position using `filter_data()`
+   - Finding the best player for that position based on the specified statistic using `find_max()`
+   - Adding that player to the team dictionary under the appropriate position key
 
-Finally *print_stats()* is a vital function from which all your other functions are called. It takes in the filtered dataset along with the team name and the stat type. To check your output carefully against the provided examples as the ZyBooks is harsh on grading whitespace.
+The team dictionary uses lowercase position abbreviations as keys ('pg', 'sg', 'sf', 'pf', 'c') with each value being the complete player record.
 
+This approach creates a modular design where the `build_team()` function coordinates the overall team creation process by utilizing the specialized filtering and player selection functions from previous steps.
+
+### Step 5 - Calculate team rating:
+The `calculate_team_rating()` checks the overall performance of the team generated in the last step:
+- `team`: A dictionary containing the team we made in step 4\
+This function should initalize a variable *total* to 0. Then foreach position,player item in *team*:
+    - Check if player exists with *if player:* (this is good practice but not strictly neccessary)
+    - Add the players PRA score (contained in the last column of the dataset) to *total*
+
+Finally return the *total* rounded to one decimal place with:
+```
+round(total, 1)
+```
+### Step 6 - Print Team Function:
+
+The `print_team()` function displays your final basketball dream team in a neatly formatted table. This function takes one argument:
+- `team`: The dictionary containing your selected players for each position
+
+Here's how the function works:
+
+1. First, it prints a header with "=== MY DREAM TEAM ===" to clearly mark the start of your team display
+
+2. Next, it creates column headers for the table with:
+  - "POSITION" - Which basketball position (PG, SG, etc.)
+  - "PLAYER" - The player's name
+  - "PTS" - Points per game
+  - "REB" - Rebounds per game
+  - "AST" - Assists per game
+
+3. The `:<5` and `:<25` in the formatting tell Python to:
+  - Left-align the text (that's what the `<` symbol does)
+  - Reserve 5 spaces for most columns (or 25 spaces for the player name)
+  - This ensures everything lines up nicely in columns
+
+4. It draws a line of 50 dashes (`-`) to separate the headers from the data
+
+5. For each position in the team dictionary:
+  - It checks if there is a player assigned (`if player:`)
+  - It prints the position, player name, and their key statistics
+  - Note that `player[1]` accesses the player's name, while the negative indices (`-3`, `-11`, `-8`) access specific statistics from the end of the list
+
+6. Finally, it:
+  - Draws another line of dashes to close the table
+  - Calls `calculate_team_rating(team)` to get the overall team rating
+  - Displays "TEAM RATING" followed by the calculated value
+```
+Remember that the output should look like:
+
+=== MY DREAM TEAM ===
+POSITION PLAYER                    PTS   REB   AST
+--------------------------------------------------
+C     Nikola Jokić              27.1  2.8   7.9
+PF    Draymond Green            7.5   1     7
+SG    James Harden              21    0.6   10.5
+PG    Chris Paul                14.7  0.3   10.8
+SF    LeBron James              30.3  1.1   6.2
+--------------------------------------------------
+TEAM RATING: 183.8
+```
+
+    
