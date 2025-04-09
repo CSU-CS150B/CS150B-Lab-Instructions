@@ -213,5 +213,31 @@ SF    LeBron James              30.3  1.1   6.2
 --------------------------------------------------
 TEAM RATING: 183.8
 ```
+### Step 7 - Pick user strategy:
+Update the function *get_user_strategy* so that it takes in user input with the prompt "Enter your choice (1-4): " which shows that the user will be able to select one of the 4 options already printed above. The format of the rest of the function should be a structure of if statements that check to see if the user input is equal to a specific value and then returns the dictionary corresponding to that input value.
+```
+#All returned dictionaries should be of the format:
+    {
+        'c': index,
+        'pf', index,
+        'pg', index,
+        'sf', index,
+        'sg', index
+    }
+```
+Try using the header returned from the first step along with the *.index()* builtin function to find the index of the columns that store points, assists and rebounds. The forth option may use any combination of values to create a unique team.
+```
+#Basic structure
+choice = input("Enter your choice (1-4): ")
+if(choice == '1'):
+   return dictionary with points index
+elif(choice == '2'):
+   return dictionary with rebounds index
+elif()choice == '3'):
+ return dictionary with assists index
+else:
+   return dictionary with your own combination of team selection values
+```
+
 
     
