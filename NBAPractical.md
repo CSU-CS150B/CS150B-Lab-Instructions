@@ -239,5 +239,12 @@ else:
    return dictionary with your own combination of team selection values
 ```
 
+### main() function:
+Lastly once all other functions are completed make sure that your main follows this basic structure:
+- call *read_csv()* and store data in *data*, and *header* values.
+- call *get_user_strategy()* and store returned dictionary in variable *team_template*.
+- call *build_team()* with *data* and *team_template*
+- Lastly call *print_team()* with the team returned from build team.
+
 
     
