@@ -98,7 +98,7 @@ calc_average(data, column_index) : The function takes two parameters, the data y
 
 ## Step 4: calc_minimums(filtered_data)
 
-Given the filtered_data from **Step 2**, yoou are going to calculate and return the minimum for each one of the 3 following columns in the table :
+Given the filtered_data from **Step 2**, you are going to calculate and return the minimum for each one of the 3 following columns in the table :
 
 - the Imidacloprid concentration (parts per billion).
 
@@ -114,7 +114,7 @@ calc_minimum(data, column_index) : The function takes two parameters, the data y
 
 ## Step 5: calc_maximums(filtered_data)
 
-Given the filtered_data from **Step 2**, yoou are going to calculate and return the maximum for each one of the 3 following columns in the table :
+Given the filtered_data from **Step 2**, you are going to calculate and return the maximum for each one of the 3 following columns in the table :
 
 - the Imidacloprid concentration (parts per billion).
 
