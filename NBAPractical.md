@@ -177,28 +177,28 @@ Here's how the function works:
 1. First, it prints a header with "=== MY DREAM TEAM ===" to clearly mark the start of your team display
 
 2. Next, it creates column headers for the table with:
-  - "POSITION" - Which basketball position (PG, SG, etc.)
-  - "PLAYER" - The player's name
-  - "PTS" - Points per game
-  - "REB" - Rebounds per game
-  - "AST" - Assists per game
+     - "POSITION" - Which basketball position (PG, SG, etc.)
+     - "PLAYER" - The player's name
+     - "PTS" - Points per game
+     - "REB" - Rebounds per game
+     - "AST" - Assists per game
 
 3. The `:<5` and `:<25` in the formatting tell Python to:
-  - Left-align the text (that's what the `<` symbol does)
-  - Reserve 5 spaces for most columns (or 25 spaces for the player name)
-  - This ensures everything lines up nicely in columns
+     - Left-align the text (that's what the `<` symbol does)
+     - Reserve 5 spaces for most columns (or 25 spaces for the player name)
+     - This ensures everything lines up nicely in columns
 
 4. It draws a line of 50 dashes (`-`) to separate the headers from the data
 
 5. For each position in the team dictionary:
-  - It checks if there is a player assigned (`if player:`)
-  - It prints the position, player name, and their key statistics
-  - Note that `player[1]` accesses the player's name, while the negative indices (`-3`, `-11`, `-8`) access specific statistics from the end of the list
+     - It checks if there is a player assigned (`if player:`)
+     - It prints the position, player name, and their key statistics
+     - Note that `player[1]` accesses the player's name, while the negative indices (`-3`, `-11`, `-8`) access specific statistics from the end of the list
 
 6. Finally, it:
-  - Draws another line of dashes to close the table
-  - Calls `calculate_team_rating(team)` to get the overall team rating
-  - Displays "TEAM RATING" followed by the calculated value
+     - Draws another line of dashes to close the table
+     - Calls `calculate_team_rating(team)` to get the overall team rating
+     - Displays "TEAM RATING" followed by the calculated value
 ```
 Remember that the output should look like:
 
