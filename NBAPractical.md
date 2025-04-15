@@ -7,18 +7,18 @@ Select a team-building strategy:
 2. Rebounding (prioritize Rebounds)
 3. Playmaking (prioritize Assists)
 4. Custom (student defined)
-Enter your choice (1-3): 1
+Enter your choice (1-4): 3
 
 === MY DREAM TEAM ===
 POSITION PLAYER                    PTS   REB   AST
 --------------------------------------------------
-C     Joel Embiid               30.6  2.1   4.2
-PF    Giannis Antetokounmpo     29.9  2     5.8
-SG    Devin Booker              26.8  0.7   4.8
-PG    Luka Dončić               28.4  0.9   8.7
-SF    LeBron James              30.3  1.1   6.2
+PG    Chris Paul                14.7  4.4   10.8
+SG    James Harden              21    7.1   10.5
+SF    LeBron James              30.3  8.2   6.2
+PF    Draymond Green            7.5   7.3   7
+C     Nikola Jokić              27.1  13.8  7.9
 --------------------------------------------------
-TEAM RATING: 221.3
+TEAM RATING: 183.8
 ```
 ### Understanding the data:
 Before you start coding, it is highly recommended that you download the dataset and develop an understanding of the data we’ll be working with. Pay attention to which columns might be important for this project. Also, note that the dataset uses abbreviations for team names. Here is a list of the team abbreviations if you want to test your code on a specific team.
