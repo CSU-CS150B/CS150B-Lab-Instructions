@@ -1,5 +1,5 @@
 # NBA dataset Practical Project - CS150B
-The goal this practical project is to build an application that will read through a dataset that contains the preformance of every NBA player for a single season and create the opitmal team based on a parameter given by the user. Given an input of 1 the output of your program should look like:
+The goal this practical project is to build an application that will read through a dataset that contains the performance of every NBA player for a single season and create the optimal team based on a parameter given by the user. Given an input of 1 the output of your program should look like:
 
 ```
 Select a team-building strategy:
@@ -193,7 +193,8 @@ Here's how the function works:
 5. For each position in the team dictionary:
      - It checks if there is a player assigned (`if player:`)
      - It prints the position, player name, and their key statistics
-     - Note that `player[1]` accesses the player's name, while the negative indices (`-3`, `-11`, `-8`) access specific statistics from the end of the list
+     - Note that `player[1]` accesses the player's name, while the other indices access specific statistics from the end of the list
+     - It is your task to replace the dummy values currently in the template the correct indices for *points*, *rebounds*, and *assists*.
 
 6. Finally, it:
      - Draws another line of dashes to close the table
@@ -233,7 +234,7 @@ if(choice == '1'):
    return dictionary with points index
 elif(choice == '2'):
    return dictionary with rebounds index
-elif()choice == '3'):
+elif(choice == '3'):
  return dictionary with assists index
 else:
    return dictionary with your own combination of team selection values
