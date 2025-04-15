@@ -203,26 +203,26 @@ Here's how the function works:
 Remember that the output should look like:
 
 === MY DREAM TEAM ===
-POSITION PLAYER                    PTS   REB   AST
+POSITION PLAYER                    PTS   REB   AST  
 --------------------------------------------------
-C     Nikola Jokić              27.1  2.8   7.9
-PF    Draymond Green            7.5   1     7
-SG    James Harden              21    0.6   10.5
-PG    Chris Paul                14.7  0.3   10.8
-SF    LeBron James              30.3  1.1   6.2
+PG    Luka Dončić               28.4  9.1   8.7  
+SG    Josh Giddey               12.5  7.8   6.4  
+SF    Jaylen Hoard              14.7  12    2.4  
+PF    Domantas Sabonis          18.9  12.3  5.8  
+C     Rudy Gobert               15.6  14.7  1.1  
 --------------------------------------------------
-TEAM RATING: 183.8
+TEAM RATING: 170.4
 ```
 ### Step 7 - Pick user strategy:
 Update the function *get_user_strategy* so that it takes in user input with the prompt "Enter your choice (1-4): " which shows that the user will be able to select one of the 4 options already printed above. The format of the rest of the function should be a structure of if statements that check to see if the user input is equal to a specific value and then returns the dictionary corresponding to that input value.
 ```
 #All returned dictionaries should be of the format:
     {
-        'c': index,
-        'pf', index,
-        'pg', index,
-        'sf', index,
-        'sg', index
+         'pg', index,
+         'sg', index
+         'sf', index,
+         'pf', index,
+         'c': index,
     }
 ```
 Try using the header returned from the first step along with the *.index()* builtin function to find the index of the columns that store points, assists and rebounds. The forth option may use any combination of values to create a unique team.
