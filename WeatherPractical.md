@@ -36,9 +36,9 @@ Please enter a filter:
 ```
 The values entered can be anything, but you do not have to worry about invalid values. Example values are:
 ```
- 2015 - will be used to only look at Temperatures in 2015
- Jan - will be used to only look at Temperatures in January across all years
- 01-Jan - will be used to only look at Temperatures on the first of January across years
+ 2015 - will be used to only look at Temperatures in 2015.
+ 2015-01 - will search all values in January 2015.
+ 01-04 - will be used to only look at Temperatures on the 4th of January across all years.
 etc
 ```
 While the value returned from this function will be used to filter values, this function does not worry about that. Instead it simply prompts the client for input and returns the answer (yes, this is a one line function).
