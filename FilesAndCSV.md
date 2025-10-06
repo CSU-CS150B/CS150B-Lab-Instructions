@@ -5,7 +5,7 @@ Working with files is essential to all programs, as files are how we hold inform
 
 In this lab you will learn how to open files, read the files, and perform different calculations with the data in the file.
 
-The most common way to open a file in python is with the “with” statement. This allows the file to close automatically when you are finished working with it.
+The most common way to open a file in python is with the “with” keyword. This allows the file to close automatically when you are finished working with it.
 ```python
 with open("myfile.txt",'r') as mytextfile:
 ```
@@ -17,10 +17,8 @@ In this lab you will learn:
 * Reading files
 * Working with loops and lists on files
 
-## Provided Code
+## Two Functions Provided 
 You will notice we provided two functions for you. main and run. You can add tests in the run function.
-
-Note: Each function that requires a parameter will use different ones in submit mode.
 
 REMINDER: You should be running your code as you work! Running tests, and even trying stuff out before you finalize your functions.
 
@@ -32,7 +30,7 @@ Find the file_addition function. In this function, you will need to open a file 
 ```
 There will be two numbers each on separate lines. You will read in the those two lines, convert the numbers to integers, and return the sum of adding the two together. Remember when you read in a file it reads it in as a string, which is why you need to convert the numbers to integers. int(val) will help you!
 
-If you are stuck on where to start, take a look at Figure 9.4.1 in your zybook. Do not ‘write’ like the example in zybook does. Instead, just return the result of adding the two numbers together.
+If you are stuck on where to start, take a look at Figure 11.4.1 in your zybook. Do not ‘write’ like the example in zybook does. Instead, just return the result of adding the two numbers together.
 
 ## line_counter(filename) (Step 2)
 For this function, you should use the with statement to open a file. You will then want to count the number of lines in the file, and simply return the total lines. There are two ways you can look at doing this. You could loop through every line incrementing a counter. OR you can use the .readlines() to load every line into a list, and take the len() of that list.
@@ -44,7 +42,7 @@ import csv
 ```
 That is at the top of the file. This will give you a number of CSV tools, but at this point, we just care about reading the lines into lists for us to process those lines!
 
-Below is some code that will help you just print the contents of the CSV file to the screen as a number if lists (one list for each line in the file using commas to separate the elements)
+Below is some code that will help you just print the contents of the CSV file to the screen as a number of lists (one list for each line in the file using commas to separate the elements)
 ```python
 with open(filename, 'r') as myfile:
     csv_reader = csv.reader(myfile) #remember import csv at the top of the file
@@ -58,7 +56,7 @@ This function will give you practice counting the total lines in a CSV file usin
 ## get_filtered_CSV(filename, filter_by) (Step 4)
 Let’s build more on CSV files. First off, for this function, make sure you can open and print out the contents of a CSV file. This will help you make sure you are down the right path (see Step 3). Now that you have the file printing we can work on the actual goal of the function. For this function, you will return a list of lists (rows), but only ones that match the filter_by value in the first location of the row.
 
-For example, if row[0] equals “United” (the value I passed into filter_by), the entire row will be added to lst using .append, but if the row[0] does not equal the filter_by value, I simply ignore the move and move on.
+For example, if row[0] equals “United” (the value I passed into filter_by), the entire row will be added to lst using .append, but if the row[0] does not equal the filter_by value, just simply ignore and move on.
 
 In the end, I should have a list of lists filtered by the first value in the row.
 
