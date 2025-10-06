@@ -79,8 +79,8 @@ Reminder: This is only the second part of the if statement, don’t forget to ad
 
 For example:
 ```python
-find_flight("files/Airport.csv", "United", "Portland", "0000", "2400") - should return ['United', 'Portland', '1335', 'B36']
-find_flight("files/Airport.csv", "Southwest", "Denver", "0800", "1700") - should return ['Southwest', 'Denver', '1455', 'B56']
+find_flight("Airport.csv", "United", "Portland", "0000", "2400") - should return ['United', 'Portland', '1335', 'B36']
+find_flight("Airport.csv", "Southwest", "Denver", "0800", "1700") - should return ['Southwest', 'Denver', '1455', 'B56']
 ```
 This function is combining the knowledge of the past few labs, so can be challenging to think through. However, the actual code is fairly limited. Try to not ‘over do it’. Instead, KEEP IT SIMPLE, and take it in steps. Can you loop through the results returned by get_filtered_CSV. Can you simply return the first flight to the selected city? ok, now that you can check for the city, use your boolean and to check for the departure time range.
 
