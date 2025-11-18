@@ -1,6 +1,6 @@
 # Practical Project > Weather
 
-Weather in Fort Collins is great. Except for when it’s not. This dataset contains the temperature and wind speed for every hour between 2008 and 2015, and is [provided](https://climate.colostate.edu/~autowx/fclwx_access.php) by the Fort Collins Weather Station and Colorado State University.
+Weather in Fort Collins is great. Except for when it’s not. This dataset contains the temperature and wind speed for every hour between 2019 and 2024, and is [provided](https://climate.colostate.edu/~autowx/fclwx_access.php) by the Fort Collins Weather Station and Colorado State University.
 
 ## Introduction
 In this practical you will be extracting data from a csv file with data about temperatures and wind speeds at certain dates and times.
@@ -36,21 +36,21 @@ Please enter a filter:
 ```
 The values entered can be anything, but you do not have to worry about invalid values. Example values are:
 ```
- 2015 - will be used to only look at Temperatures in 2015.
- 2015-01 - will search all values in January 2015.
+ 2022 - will be used to only look at Temperatures in 2022.
+ 2023-01 - will search all values in January 2023.
  01-04 - will be used to only look at Temperatures on the 4th of January across all years.
 etc
 ```
 While the value returned from this function will be used to filter values, this function does not worry about that. Instead it simply prompts the client for input and returns the answer (yes, this is a one line function).
 
 ## Step 3 - average_temperature(weather, filter)
-Given a specific filter, return the average temperature for everything that matches that filter (all days in 2015 for example). When working with the filter, this is a case for the in operator. You can say if filter in row[date_index](if you already pulled row from your weather list), and that will only return true if the filter shows up in that date. That is valid to use, as are other methods.
+Given a specific filter, return the average temperature for everything that matches that filter (all days in 2020 for example). When working with the filter, this is a case for the in operator. You can say if filter in row[date_index](if you already pulled row from your weather list), and that will only return true if the filter shows up in that date. That is valid to use, as are other methods.
 
 A question turns into how do you test this? Here is an example of a test that used
 ```python
 weather = csv_reader('Temperatures.csv')
-input_one = "2015"
-input_two = "Dec"
+input_one = "2020"
+input_two = "11-01"
 answer_one = "{:.2f}".format(average_temperature(weather, input_one))
 answer_two = "{:.2f}".format(average_temperature(weather, input_two))
 print("TESTING", answer_one)
