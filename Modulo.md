@@ -1,5 +1,6 @@
 # Lab 04: Modulo Lab
 
+
 ## Introduction
 In this lab you will learn how to write a while loop and get practice using the modulo operator. A while loop can be used to calculate a set of statements as long as the while condition is true. The **modulo operator** (%) evaluates the remainder of the division of two integer operands.
 
