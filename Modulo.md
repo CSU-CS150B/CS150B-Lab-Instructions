@@ -3,7 +3,7 @@
 ## Introduction
 In this lab you will learn how to write a while loop and get practice using the modulo operator. A while loop can be used to calculate a set of statements as long as the while condition is true. The **modulo operator** (%) evaluates the remainder of the division of two integer operands.
 
-In this lab you will learn:
+**In this lab you will learn:**
 
 * Using functions to divide a problem into smaller parts.
 * While loops
@@ -19,7 +19,8 @@ You will notice we provided two functions for you. **main** and **run**. You sho
 ```
 Add your name and email!
 
-**REMINDER**: You should be running your code as you work - just to see what is happening.
+> [!NOTE]
+> You should be running your code as you work - just to see what is happening.
 
 ## Factorial Calculation (Step 1)
 Find the **factorial** function. Given a number, find the factorial of it. For example 4! = 4 x 3 x 2 x 1 = 24
@@ -30,9 +31,10 @@ Before writing any code, run the program to see what it does. Make sure to have 
 
 Did you get an error? That was supposed to happen!
 
-The error says:
+<dl> The error says:
 
-“We couldn’t run your program to completion. Could be a temporary system issue – please try again. Could be your program never finished, due to an infinite loop, infinite recursion, waiting for input, or other possibilities.”
+  <dd> “We couldn’t run your program to completion. Could be a temporary system issue – please try again. Could be your program never finished, due to an infinite loop, infinite recursion, waiting for input, or other possibilities.” </dd>
+</dl>
 
 This error was caused by an infinite loop. This is because the number passed in from input never decreases, so it’s stuck in the while loop because it never reaches 0.
 
@@ -62,14 +64,18 @@ If 64 is passed in, the result returned should be 1.
 ```
 Remember to run and test it.
 
-If you don’t understand how modulo works, go back through reading 6 in zyBooks.
+If you don’t understand how modulo works, go back through [Reading 6 in zyBooks](https://learn.zybooks.com/zybook/COLOSTATECS150BCundiffSpring2026In-Person/chapter/6/section/5) .
 
 ## Find if Number is Even (Step 3)
 Find the **evenNum** function. Given a number passed in as a parameter, you should use the modulo operator to see if that number is even. If the number is even, return True. If it is not even, return False.
 
-**Note:** Return True and False as Booleans and not as Strings.
+> [!NOTE]
+> Return True and False as Booleans and not as Strings.
 
-**Hint:** if a number is even, the remainder should equal 0. You need to figure out which number to divide by to get 0.
+> [!TIP]
+> if a number is even, the remainder should equal 0.
+> You need to figure out which number to divide by to get 0.
+
 ```
 Note: the hashtag (#) represents any number in this example. i.e. 4
 
