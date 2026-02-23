@@ -88,7 +88,9 @@ else:
 ## Find if Number is Odd (Step 4)
 Find the **oddNum** function. You should use the modulo operator to see if the number passed in is odd. Return True if the number is odd and return False if it is not.
 
-**Hint:** This should be very similar to the **evenNum** function. If a number is odd, it will not divide evenly, therefore the remainder will **not** equal 0.
+> [!TIP]
+> This should be very similar to the **evenNum** function. 
+> If a number is odd, it will not divide evenly, therefore the remainder will **not** equal 0.
 
 ## Check if Number is Even or Odd (Step 5)
 Using the previous functions, check to see if a number is even or odd. If the number is even, return “even”. If the number is odd, return “odd”.
