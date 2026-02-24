@@ -8,7 +8,7 @@ In this lab you will learn how to write a while loop and get practice using the 
 * Using functions to divide a problem into smaller parts.
 * While loops
 * Modulo
-
+ 
 ## Provided Code
 You will notice we provided two functions for you. **main** and **run**. You should not modify anything in the **run** function, but we encourage you to read through it. The **run** function is the ‘glue’ in the Divide-Conquer-Glue strategy.
 
