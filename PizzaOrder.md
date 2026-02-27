@@ -27,7 +27,7 @@ print(example[0:2]) # prints 'AB'
 print(example[3:6]) # prints 'DEF'
 ```
 
-**Topping one can only be 6 letters long**, in order for our string slicing to work properly. Since topping one is the beginning of our pizza order we need to extract the topping starting at the first index of the string, which is where we get the 0 in pizza_order[0:7]. The index after the colon is where we want to stop the string. This character at that index will NOT be included in the string slice.
+**Topping one can only be 6 letters long**, in order for our string slicing to work properly. Since topping one is the beginning of our pizza order we need to extract the topping starting at the first index of the string, which is where we get the 0 in pizza_order[0:6]. The index after the colon is where we want to stop the string. This character at that index will NOT be included in the string slice.
 
 ### Testing
 
@@ -40,7 +40,7 @@ You will need to figure out the indexes to extract a 9-letter topping.
 
 You won’t start at index 0 this time because you don’t want topping 1. 
 
-What index will you need to start at? 
+What index will you need to start at? (Whitespace & symbols counts as a character when indexing.)
 
 You need the index where the letter ‘p’ is at. 
 
@@ -105,9 +105,31 @@ Hint: You will need to call the other functions you completed in prior steps
 
 Hint: Pay close attention to the wording given to determine if you need if, elif, or else
 
-## Turning In (Step 6)
+## Turning In & Testing (Step 6)
+Pizza Order examples:
+```python
+    """Test all the functions."""
+    print("=== Testing get_topping_one ===")
+    print(get_topping_one("cheese,pepperoni,3000"))  # Expected: cheese
+    print(get_topping_one("olives,pineapple,4500"))  # Expected: olives
 
-If you feel confident about your answers in develop mode, now you can run in submit mode to make sure you get full points.
+    print("\n=== Testing get_topping_two ===")
+    print(get_topping_two("cheese,pepperoni,3000"))  # Expected: pepperoni
+
+    print("\n=== Testing get_price ===")
+    print(get_price("cheese,pepperoni,3000"))  # Expected: 30.0
+
+    print("\n=== Testing too_much_cheese ===")
+    print(too_much_cheese("cheese,pepperoni,3000"))  # Expected: True
+    print(too_much_cheese("olives,pineapple,4500"))  # Expected: False
+
+    print("\n=== Testing full_order ===")
+    print(full_order("cheese,pepperoni,3000"))  # Expected: That's a lot of cheese!
+    print(full_order("olives,pineapple,4500"))  # Expected: Wow that's an expensive pizza!
+    print(full_order("olives,artichoke,2500"))  # Expected: That's an interesting combo.
+```
+
+If you feel confident about your output after running your program, now you can submit it to get points.
 
 Make sure you click through the Canvas link to the assignment if you haven’t already. 
 
