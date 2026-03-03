@@ -91,42 +91,42 @@ Now we are putting all the steps together. You will need to write a series of if
 
 1. if too_much_cheese returns True, return “That’s a lot of cheese!”
 
-2. if too_much_cheese returns False AND get_price returns 45 return “Wow that’s an expensive pizza!”
+2. elif too_much_cheese returns False AND get_price returns 45 return “Wow that’s an expensive pizza!”
 
-3. if get_topping_two returns pineapple return “Pineapple DOES belong on pizza.”
+3. elif get_topping_two returns pineapple return “Pineapple DOES belong on pizza.”
 
 4. elif get_topping_two returns artichoke return “That’s an interesting combo.”
 
-5. if get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
+5. elifif get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
 
 6. else return “Now that’s a smokin’ deal! Give me more!”
 
 Hint: You will need to call the other functions you completed in prior steps
 
-Hint: Pay close attention to the wording given to determine if you need if, elif, or else
+Hint: This should be a single connected chain. 
 
 ## Turning In & Testing (Step 6)
 Pizza Order examples:
 ```python
     """Test all the functions."""
     print("=== Testing get_topping_one ===")
-    print(get_topping_one("cheese,pepperoni,3000"))  # Expected: cheese
-    print(get_topping_one("olives,pineapple,4500"))  # Expected: olives
+    print(get_topping_one("cheese, pepperoni, 3000"))  # Expected: cheese
+    print(get_topping_one("olives, pineapple, 4500"))  # Expected: olives
 
     print("\n=== Testing get_topping_two ===")
-    print(get_topping_two("cheese,pepperoni,3000"))  # Expected: pepperoni
+    print(get_topping_two("cheese, pepperoni, 3000"))  # Expected: pepperoni
 
     print("\n=== Testing get_price ===")
-    print(get_price("cheese,pepperoni,3000"))  # Expected: 30.0
+    print(get_price("cheese, pepperoni, 3000"))  # Expected: 30.0
 
     print("\n=== Testing too_much_cheese ===")
-    print(too_much_cheese("cheese,pepperoni,3000"))  # Expected: True
-    print(too_much_cheese("olives,pineapple,4500"))  # Expected: False
+    print(too_much_cheese("cheese, pepperoni, 3000"))  # Expected: True
+    print(too_much_cheese("olives, pineapple, 4500"))  # Expected: False
 
     print("\n=== Testing full_order ===")
-    print(full_order("cheese,pepperoni,3000"))  # Expected: That's a lot of cheese!
-    print(full_order("olives,pineapple,4500"))  # Expected: Wow that's an expensive pizza!
-    print(full_order("olives,artichoke,2500"))  # Expected: That's an interesting combo.
+    print(full_order("cheese, pepperoni, 3000"))  # Expected: That's a lot of cheese!
+    print(full_order("olives, pineapple, 4500"))  # Expected: Wow that's an expensive pizza!
+    print(full_order("olives, artichoke, 2500"))  # Expected: That's an interesting combo.
 ```
 
 If you feel confident about your output after running your program, now you can submit it to get points.
