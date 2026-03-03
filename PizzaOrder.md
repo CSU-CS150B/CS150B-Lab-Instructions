@@ -68,7 +68,7 @@ The value you should see should be 30.
 ## Too Much Cheese! (Step 4)
 This function returns True or False depending on if there is cheese in the order.
 
-Remember cheese can only be topping one because it is 5 letters.
+Remember cheese can only be topping one because it is 6 letters.
 
 You will have to call the get_topping_one function and if that value is equal to cheese, return True. Otherwise, return False.
 
@@ -97,7 +97,7 @@ Now we are putting all the steps together. You will need to write a series of if
 
 4. elif get_topping_two returns artichoke return “That’s an interesting combo.”
 
-5. elifif get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
+5. elif get_price is less than 12 OR greater than or equal to 50 return “Are we sure they’re charging us right?”
 
 6. else return “Now that’s a smokin’ deal! Give me more!”
 
@@ -125,7 +125,7 @@ Pizza Order examples:
 
     print("\n=== Testing full_order ===")
     print(full_order("cheese, pepperoni, 3000"))  # Expected: That's a lot of cheese!
-    print(full_order("olives, pineapple, 4500"))  # Expected: Wow that's an expensive pizza!
+    print(full_order("olives, pineapple, 4500"))  # Expected: Unclear. Try this out and see what happens. Can you figure out what is going on here? 
     print(full_order("olives, artichoke, 2500"))  # Expected: That's an interesting combo.
 ```
 
