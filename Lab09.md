@@ -76,18 +76,28 @@ This will give you a number of CSV tools, but at this point, we just care about 
 
 > **Tip:** To the left of the **run** button there is a file symbol. Click on this and you can select a specific file to view the raw contents of the CSV.
 
-Below is some code that will help you print the contents of the CSV file to the screen as a number of lists. `file_list` is a **list** where each element itself is its own **list** (each element being one song and its info).
+Remember to open a csv you will need to use a "with open" statement and specifiy the mode you want to use ('r' for reading, 'w' for writing, 'a' for appending). Once you have opened the csv, you can read the file contents in one of four ways:
+* .read() - this will read all file contents into a single string
+* .readline() - this will read one line of the file at a time
+* .readlines() - this will read the file into a list of strings, where each string in the list is a row of the csv file
+* csv.reader({your_file_name}) - this will utilize the csv module to read the file contents into a reader object which you can iterate over in a loop to access the individual lines. You can think of this object as a list of lists, where each list element in the overall list is a row of the csv file ([[row1], [row2], [row3]]). It is important to note that once you read a line from the reader object, it will remove it from memory and you will not be able to access it again so if you want to be able to access the file contents multiple times you will want to add them to a data structure like a list. You will also need to have "import csv" at the top of your program to access this method.
+
+These reading methods all return the contents so you will need to store that return value in a variable.
+  
+Below is some psuedocode of one way you could read the csv into your program using the csv.reader() method.
 
 ```python
-with open(filename, 'r') as myfile:
-    file_list = csv.reader(myfile)  # remember: import csv at the top of the file
-    for row in file_list:
-        # then add each row to the list
+Open the csv using with open in read mode:
+    Create an empty list to hold the file contents
+    Create a reader object by using csv.reader({your_filename})
+    Iterate over the reader object using a loop:
+        Add each element of the reader object to the empty list we made earlier
+    Return the now populated list
 ```
 
 > **Notice:** The first row will be the header. For our implementation we want to omit the header so when/if you do analysis on the data it won't have unexpected behaviors. You can do this in two ways:
 
-1. Use `next(file_list)` — this reads the first element in your data, hence skipping it.
+1. Use `next(file_list)` — this reads the first element in your data, hence skipping it, and will need to be placed before your loop. This method will only work if you are using the csv.reader() method as next() is a function in the csv module.
 
 **OR**
 
@@ -101,24 +111,6 @@ This function will:
 * Loop through the dataset using the variable that called `csv.reader()`
 * Append each row (loop variable) to the empty list
 * Return the populated list
-
-**Example implementation:**
-
-```python
-import csv
-
-def csv_data(filename):
-    """
-    Reads a CSV file and returns its content as a list of lists, skipping the header.
-    """
-    data = []
-    with open(filename, 'r') as myfile:
-        file_list = csv.reader(myfile)
-        next(file_list)  # Skip the header row
-        for row in file_list:
-            data.append(row)
-    return data
-```
 
 ---
 
@@ -148,19 +140,19 @@ print(name.upper())
 
 In the end, you should have a list of lists that only includes songs of the specific genre (argument) that was passed in.
 
-**Example implementation:**
+**Example psuedocode:**
 
 ```python
 def get_filtered_CSV(filename, filter_by):
     """
     Filters CSV data by a specified genre (case-insensitive) and returns a list of matching rows.
     """
-    filtered_list = []
-    all_data = csv_data(filename)
-    for row in all_data:
-        if len(row) > 3 and row[3].lower() == filter_by.lower():
-            filtered_list.append(row)
-    return filtered_list
+    Create a list to hold the filtered data
+    Get the unfiltered data list by calling the csv_data() function you wrote in step three
+    Use a loop to iterate over the elements in the unfiltered data list:
+        If the length of the row is greater than 3 and contains the word we are looking for:
+            Add to the filtered list
+    Return the filtered list
 ```
 
 ---
@@ -208,22 +200,15 @@ def find_era(filename, genre, earliest, latest):
     """
     Finds songs of a specific genre within a given release year range.
     """
-    find_songs = []
-    song_genre = get_filtered_CSV(filename, genre)
+    Create an empty list to hold the songs we find matching our year
+    Get the list of songs that match our genre parameter by calling the get_filtered_CSV() function you wrote in step 4
 
-    earliest_year = int(earliest)
-    latest_year = int(latest)
+    Create a loop to iterate over the elements in the list of songs get_filteres_CSV() returned:
+        If the row length is greater than 2:
+            If the element in that row at the year index (index 2) is greater than earliest and less than lastest:
+                Add song to the empty list we made at the top of the function
 
-    for row in song_genre:
-        if len(row) > 2:
-            try:
-                year = int(row[2])
-                if earliest_year <= year <= latest_year:
-                    find_songs.append(row)
-            except ValueError:
-                print(f"Skipping row with invalid year data: {row}")
-
-    return find_songs
+    Return the now populated list holding songs that match our specified genre and year
 ```
 
 **Sample test output:**
