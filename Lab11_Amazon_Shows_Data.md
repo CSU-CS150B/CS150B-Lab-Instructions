@@ -8,7 +8,6 @@ In this lab, you'll explore real-world data from Amazon Prime titles using `pand
 - Use loops and conditionals
 - Write simple functions to analyze real data
 
-> 💻 **To run the code yourself**, open the [Google Colab notebook](https://colab.research.google.com/drive/1UxEVRcyoeFUV5FdZIWVps9jtdsbaNUmH?usp=sharing). This page is a read-only reference version of the instructions.
 
 ---
 
