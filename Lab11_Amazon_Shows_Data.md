@@ -8,7 +8,7 @@ In this lab, you'll explore real-world data from Amazon Prime titles using `pand
 - Use loops and conditionals
 - Write simple functions to analyze real data
 
-> 💻 **To run the code yourself**, open the [Google Colab notebook](https://colab.research.google.com/github/CSU-CS150B/amazon-prime-data/blob/main/Lab11_Amazon_Shows_Data.ipynb). This page is a read-only reference version of the instructions.
+> 💻 **To run the code yourself**, open the [Google Colab notebook](https://colab.research.google.com/drive/1UxEVRcyoeFUV5FdZIWVps9jtdsbaNUmH?usp=sharing). This page is a read-only reference version of the instructions.
 
 ---
 
@@ -16,7 +16,7 @@ In this lab, you'll explore real-world data from Amazon Prime titles using `pand
 
 We'll start by loading the dataset using `pandas`.
 
-The dataset is hosted online so you don't need to download or upload anything — it will load directly into your notebook.
+The dataset is hosted online so you don't need to download or upload anything it will load directly into your notebook.
 
 ```python
 import pandas as pd
