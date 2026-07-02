@@ -1,4 +1,4 @@
-# Lab 01: All About Functions Lab
+# Lab 4: All About Functions Lab
 ## Defining a function guide (Step 0.5)
 Before we start coding lets quickly go over how to define a function in Python. A function is a reusable block of code which you can *call* to run the code contained within it.
 
