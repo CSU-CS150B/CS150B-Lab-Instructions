@@ -1,4 +1,4 @@
-# Lab 05: Magic 8 Ball Lab
+# Lab 6: Magic 8 Ball Lab
 
 ## Introduction
 For this lab, you are going to build a simple magic eight-ball, so you no longer have to make any choices. On that note, if you haven’t, you should watch [Interstate 60](https://www.imdb.com/title/tt0165832/). All joking aside, you will build a 15 sided magic 8-ball, just for simplicity (an actual one has 20 sides for choices).
