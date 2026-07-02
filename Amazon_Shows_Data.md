@@ -1,4 +1,4 @@
-# Amazon Prime Lab: Getting Comfortable with `pandas`
+# Lab 18 - Amazon Prime Lab: Getting Comfortable with `pandas`
 
 Welcome!  
 In this lab, you'll explore real-world data from Amazon Prime titles using `pandas`. You'll learn how to:
