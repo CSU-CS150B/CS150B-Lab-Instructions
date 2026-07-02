@@ -1,4 +1,4 @@
-# Lab 00 - Basics
+# Lab 1 - Basics
 ## Introduction
 First things first, there is a lot of information in this lab. Please read carefully and entirely as all of this information will be useful for future labs and will give you the basis of how to code in Python!
 
