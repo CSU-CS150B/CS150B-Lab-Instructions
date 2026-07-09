@@ -1,4 +1,4 @@
-# Lab 9: Parsons Problem
+# Lab 9: Functions Game
 
 Welcome to Lab 9, today's lab will have you reconstructing a series of functions in order to get a game (that's already been made for you) properly running.
 A couple notes for this lab:
