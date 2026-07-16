@@ -1,4 +1,4 @@
-# Welcome to Lab 15
+# Welcome to Lab 14
 
 Today we will be going over writing to files using "with open".
 
