@@ -36,7 +36,7 @@ If n = 3, sums.txt should look like:
 With every sum having a newline after it. Take note that writing to a file several times in one "with open" will not overwrite but append
 to the open file. 
 
-## Step 3
+## Step 3: Append to a text file
 Now that we create a file containing all the sums, we want to append the statement, "Sums of {n} complete!" to the end of "sums.txt".
 
 To append rather than overwrite, use "a" when opening the file instead of "w". For example:
@@ -47,7 +47,7 @@ with open("append.txt", "a") as f:
 
 Doing this will simply add to the file instead of erasing everything when writing. 
 
-## Step 4
+## Step 4: Writing to CSVs
 Now that we're comfortable with text files, we'll move on to the more data focused CSV file. Just like reading CSVs, the CSV module
 includes the ability to write to CSVs. You still need to use "with opens" to create/open the file, and to create a CSV writer, just like a 
 reader, do:
@@ -61,7 +61,7 @@ Then to write to the file:
 Take note that .writerows() specifically takes in a list of lists. writerows() will write every row to the file in one go, without 
 the need for a loop. There is one provided for you to test with called students.
 
-## Step 5
+## Step 5: Append to a CSV
 We want to be able to add new students to "students.csv" without completely erasing everything we've already added. This step will look almost 
 identical to the last, but instead we want to open the file in append rather than write, and write to the file using:
 
