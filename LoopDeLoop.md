@@ -1,4 +1,4 @@
-# Lab 12 - Loop de Loop
+# Lab 11 - Loop de Loop
 
 In this lab, you will practice creating lists and using loops. You will write four functions (Steps 2-5) and review one provided function (Step 1). Each function builds on the loop concepts from your readings and lectures.
 
