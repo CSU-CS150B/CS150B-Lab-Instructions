@@ -1,4 +1,4 @@
-# Lab 13 - Loops Part 2
+# Lab 12 - Loops Part 2
 
 In todays lab, you will be working with for loops to parse over sequences to achieve a desired result. 
 Remember that .lower() will allow you to compare two characters without case sensitivity
