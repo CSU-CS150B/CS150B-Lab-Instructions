@@ -1,4 +1,4 @@
-# Lab 5: Error Tracing
+# Lab 5 - Error Tracing
 
 This lab is focused on an essential part of programming; debugging. The instructions for today are very simple, debug this code until it properly runs without error.
 The majority of the problems that break the code and will be visible, which you can see in the black terminal box below your code when you run it. The structure of the error will
