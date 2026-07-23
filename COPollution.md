@@ -33,6 +33,7 @@ This function takes in filtered data and returns the maximum value for three sep
   1. Daily Max 8-hour CO Concentration, Index: 4 
   2. DAILY_AQI_VALUE (Daily Air Quality Index Value), Index: 6
   3. PERCENT (Percentage of required monitoring days having valid 8-hour data), Index: 9
+
 To do so, it is useful to use the helper function calcMax.
 To find the max you should loop through the file and keep a variable that keeps track of the maximum for each column, updating it whenever there is a larger value.
 This function returns a tuple in the order (Daily Max, Daily AQI, Percent).
@@ -46,6 +47,7 @@ This function takes in filtered data and returns the minimum value for three sep
   1. Daily Max 8-hour CO Concentration, Index: 4 
   2. DAILY_AQI_VALUE (Daily Air Quality Index Value), Index: 6
   3. PERCENT (Percentage of required monitoring days having valid 8-hour data), Index: 9
+
 To do so, it is useful to use the helper function calcMin.
 To find the min you should loop through the file and keep a variable that keeps track of the minimum for each column, updating it whenever there is a smaller value.
 This function returns a tuple in the order (Daily Max, Daily AQI, Percent).
@@ -59,6 +61,7 @@ This function takes in filtered data and returns the Average value for three sep
   1. Daily Max 8-hour CO Concentration, Index: 4 
   2. DAILY_AQI_VALUE (Daily Air Quality Index Value), Index: 6
   3. PERCENT (Percentage of required monitoring days having valid 8-hour data), Index: 9
+
 To do so, it is useful to use the helper function calcAvg.
 To find the max you should loop through the file and keep a variable that keeps track of the total for each column, dividing it by the number of rows at the end.
 This function returns a tuple in the order (Daily Max, Daily AQI, Percent).
