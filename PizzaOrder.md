@@ -1,4 +1,4 @@
-# Lab 11: Pizza Order Lab
+# Lab 10 - Pizza Order Lab
 
 ## Introduction
 
