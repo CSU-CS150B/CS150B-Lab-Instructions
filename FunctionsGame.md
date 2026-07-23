@@ -1,6 +1,6 @@
-# Lab 9: Functions Game
+# Lab 8 - Functions Game
 
-Welcome to Lab 9, today's lab will have you reconstructing a series of functions in order to get a game (that's already been made for you) properly running.
+Welcome to Lab 8, today's lab will have you reconstructing a series of functions in order to get a game (that's already been made for you) properly running.
 A couple notes for this lab:
 1. You can move around lines of code freely using a keyboard short cut. Hold down one of these keys (depending on your system) and the arrow keys to move code.
      - On Mac: option key
