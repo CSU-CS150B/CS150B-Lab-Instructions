@@ -1,4 +1,4 @@
-# Lab 2 - All About Strings
+# Lab 3 - All About Strings
 
 ## Introduction
 This lab will be all about the "String" data type in Python and the many different ways you can use them. 
