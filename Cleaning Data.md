@@ -1,4 +1,4 @@
-# Lab 12: Cleaning Data
+# Lab 13: Cleaning Data
 
 ## Introduction
 In this lab, you will be using the Pandas Library to read a csv dataset into a dataframe, and then cleaning the data in two different ways to see how they affect the total average of our data.
