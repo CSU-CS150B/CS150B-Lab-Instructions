@@ -23,7 +23,7 @@ print(sum_result)  # Output: 8
 We will continue with the printStatement function. Under the print(“Welcome to your second lab”), print “This is my first print statement!”. 
 Make sure it is indented underneath the function at the same indentation level as the other print statement. 
 
-Make Sure to remove the __#__ to uncomment the print(printStatement()) located in run() before you run the function!
+Make Sure to remove the __#__ to uncomment the printStatement() located in run() before you run the function!
 
 _If you don't remember what comments are, refer to section 2.2 in your reading._
 
