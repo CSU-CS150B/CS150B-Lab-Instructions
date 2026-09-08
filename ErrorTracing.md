@@ -1,7 +1,7 @@
 # Lab 6 - Error Tracing
 
 This lab is focused on an essential part of programming; debugging. The instructions for today are very simple, debug this code until it properly runs without error.
-The majority of the problems that break the code and will be visible, which you can see in the black terminal box below your code when you run it. The structure of the error will
+The majority of the problems that break the code will be visible, which you can see in the black terminal box below your code when you run it. The structure of the error will
 make it easy to trace back to the source. For example, based on your previous lab:
 
 ```
@@ -11,12 +11,11 @@ make it easy to trace back to the source. For example, based on your previous la
 4. SyntaxError: unterminated string literal (detected at line 30)
 ```
 
-Line 1 tells you the file the error occurs in (not important for this course) and the line it is occuring on (very important). With this example, we know that whatever problem we're having 
+- Line 1 tells you the file the error occurs in (not important for this course) and the line it is occurring on (very important). With this example, we know that whatever problem we're having 
 is happening on line 30 in our code. 
-Line 2 writes out the line that is causing the error. The error should be visible in this line. If the error message is very long, start at the bottom and work up.
+- Line 2 writes out the line that is causing the error. The error should be visible in this line. If the error message is very long, start at the bottom and work up.
 In this example, some part of this return statement is preventing the code from continuing. 
-- Line 3 tries to point out where in the line the error is happening. In this example, we can see that the problem is coming from this f string, although does not point out the 
-exact issue.
+- Line 3 tries to point out where in the line the error is happening with an arrow. In this example, we can see that the problem is coming from this f string.
 - Line 4 gives us the error type and its reasoning. In this example, we can see that we are getting a SyntaxError because of an unterminated string literal. This means that the 
 string was started, but never ended. We have the opening quoatation mark but the string is missing its closing quotation mark. Once we fix this, we will be error free.
 
@@ -31,15 +30,18 @@ x = int("Hello World") (Type Error: Cannot cast string to int)
 **Logic Error Example:**
 ```
 bill = "7.89"
-tip = "1.22"
+tip = "1.23"
 total = int(bill) + int(tip)
-print("Your total bill is $" + total) #prints "8"
-(Correct output would keep our cents in decimal place, but casting to int instead of float makes it a whole number)
+print("Your total bill is $" + str(total))
+#prints "Your total bill is $9"
+
+Correct output would keep our cents in the decimal place, but casting to int instead of float makes it a whole number
+Should print "Your total bill is $9.12"
 ```
 
 ## Your Lab:
 
-To complete this lab, you will have to find the errors of each of these types and fix them. Your terminal will help in locating and identifying the problem, but it will be up
+To complete this lab, you will have to find the errors of each type and fix them. Your terminal will help in locating and identifying the problem, but it will be up
 to you to get the code running properly. These instructions will not go over the code you will be using for todays lab, because the terminal should tell you everything you need.
 However, a very important note is that the terminal might mention the run() function when describing an error, but it is not the issue. Do NOT remove the run() function in any
 lab.
