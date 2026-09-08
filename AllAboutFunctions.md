@@ -125,4 +125,4 @@ Nice work, you just finished the lab! Now you can run in ‘Submit Mode’ to ma
 Make sure to check the next step below to make sure your grade is sent to Canvas.
 
 ## Turning In (Step 6)
-Make sure you click through the canvas link to the assignment if you haven’t already. This triggers the linking process, so canvas can get an updated score. As with the previous assignment, you only have five changes to ‘submit for grading’, so it is important to run the program testing it for various cases before you click submit for grading.
+Make sure you click through the canvas link to the assignment if you haven’t already. This triggers the linking process, so canvas can get an updated score. It's important to run the program, testing it for various cases before you click submit for grading.
