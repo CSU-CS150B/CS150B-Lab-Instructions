@@ -25,3 +25,7 @@ out before the last bit of runGame executes.
 Once you have the game running, try changing the values of health, attack, and defense to see how that effects the game. 
 
 Take a look at the Game file to see all the different function calls and how they're used (even if you can't understand the entire program yet).
+
+## NOTE
+
+When you are ready to submit, make sure startGame() is commented in the run function, otherwise you will get an error that will prevent you from getting a grade
