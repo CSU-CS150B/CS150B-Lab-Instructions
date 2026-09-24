@@ -55,7 +55,7 @@ doubleloop(3, 4) # returns ["0:0", "0:1", "0:2", "0:3", "1:0",
 
 Write a function called `howmanycombos()` that takes three parameters, all integers. This function returns a list of all possible combinations for a lock, where each combination is a string of three numbers separated by colons.
 
-This is very similar to Step 3, but with three nested loops instead of two. The first loop goes from 0 to the first parameter, the second from 0 to the second, and the third from 0 to the third. Format each combination as an f-string like `f"{i}:{j}:{k}"`.
+This is very similar to Step 3, but with three nested loops instead of two. The first loop goes from 0 to the first parameter, the second from 0 to the second, and the third from 0 to the third, all inclusive. Format each combination as an f-string like `f"{i}:{j}:{k}"`.
 
 **Example:**
 ```python
