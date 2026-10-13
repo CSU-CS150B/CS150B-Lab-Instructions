@@ -80,7 +80,7 @@ Remember to open a csv you will need to use a "with open" statement and specifiy
 * .read() - this will read all file contents into a single string
 * .readline() - this will read one line of the file at a time
 * .readlines() - this will read the file into a list of strings, where each string in the list is a row of the csv file
-* csv.reader({your_file_name}) - this will utilize the csv module to read the file contents into a reader object which you can iterate over in a loop to access the individual lines. You can think of this object as a list of lists, where each list element in the overall list is a row of the csv file ([[row1], [row2], [row3]]). It is important to note that once you read a line from the reader object, it will remove it from memory and you will not be able to access it again so if you want to be able to access the file contents multiple times you will want to add them to a data structure like a list. You will also need to have "import csv" at the top of your program to access this method.
+* csv.reader(your_file_name) - this will utilize the csv module to read the file contents into a reader object which you can iterate over in a loop to access the individual lines. You can think of this object as a list of lists, where each list element in the overall list is a row of the csv file ([[row1], [row2], [row3]]). It is important to note that once you read a line from the reader object, it will remove it from memory and you will not be able to access it again so if you want to be able to access the file contents multiple times you will want to add them to a data structure like a list. You will also need to have "import csv" at the top of your program to access this method.
 
 These reading methods all return the contents so you will need to store that return value in a variable.
   
@@ -89,7 +89,7 @@ Below is some psuedocode of one way you could read the csv into your program usi
 ```python
 Open the csv using with open in read mode:
     Create an empty list to hold the file contents
-    Create a reader object by using csv.reader({your_filename})
+    Create a reader object by using csv.reader(your_filename)
     Iterate over the reader object using a loop:
         Add each element of the reader object to the empty list we made earlier
     Return the now populated list
