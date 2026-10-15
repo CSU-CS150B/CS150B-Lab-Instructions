@@ -61,6 +61,8 @@ Then to write to the file:
 Take note that .writerows() specifically takes in a list of lists. writerows() will write every row to the file in one go, without 
 the need for a loop. There is one provided for you to test with called students.
 
+For this step, use the csv writer and writerows() to write lst to the file passed in as filename. 
+
 ## Step 5: Append to a CSV
 We want to be able to add new students to "students.csv" without completely erasing everything we've already added. This step will look almost 
 identical to the last, but instead we want to open the file in append rather than write, and write to the file using:
