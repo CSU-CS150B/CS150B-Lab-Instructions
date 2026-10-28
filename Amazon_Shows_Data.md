@@ -1,4 +1,4 @@
-# Lab 17 - Amazon Prime Lab: Getting Comfortable with `pandas`
+# Lab 16 - Amazon Prime Lab: Getting Comfortable with `pandas`
 
 Welcome!  
 In this lab, you'll explore real-world data from Amazon Prime titles using `pandas`. You'll learn how to:
@@ -13,21 +13,9 @@ In this lab, you'll explore real-world data from Amazon Prime titles using `pand
 
 ## Load the Data
 
-We'll start by loading the dataset using `pandas`.
+As usual when it comes to handling files, you should start by looking at the data in the csv file. Pay special attention to the headers and scroll through the lab to get an idea of what kinds of patterns you see in the data.
 
-The dataset is hosted online so you don't need to download or upload anything it will load directly into your notebook.
-
-```python
-import pandas as pd
-
-url = 'https://raw.githubusercontent.com/CSU-CS150B/amazon-prime-data/refs/heads/main/amazon_prime_titles.csv'
-df = pd.read_csv(url)
-df.head(10)
-```
-
-```python
-df.groupby('type').count()
-```
+Keep in mind that for this lab we imported and opened the file for you! Since the reader was defined to a variable, this time you won't need to use `with open` every time you need to access data in it.
 
 ---
 
@@ -38,7 +26,7 @@ A **DataFrame** is a table where:
 - Each **row** is a single item (in our case, a TV show or movie)
 - Each **column** is a piece of information about that item (like title, rating, or release year)
 
-You can think of it like a spreadsheet or a SQL table.
+You can think of it like a spreadsheet or an SQL table.
 
 **DataFrames are useful because they let us:**
 
@@ -58,6 +46,11 @@ print("Total rows:", len(df))
 print("Column names:", df.columns.tolist())
 print("First five titles:", df['title'][0:5])
 ```
+#### Hint:
+
+`
+The run function decides what in your code executes and in what order. You should uncomment the run() and write your test code there.
+`
 
 ---
 
@@ -123,7 +116,7 @@ if "Secret" in title:
     print("This title contains the word 'Secret'")
 ```
 
-You can use `in` when looping through your dataset to check if a keyword appears in a title:
+You can use `in` when looping through your dataset to check if a keyword appears in a title. For example:
 
 ```python
 count = 0
@@ -171,7 +164,8 @@ Write a function that returns **how many titles** include the given word (e.g., 
 
 #### What to Think About:
 - You'll need to look at the `"title"` column.
-- Use `.lower()` to ignore capitalization.
+- Do you want your code to be case-sensitive? 
+    ` Tip: You've already tackled this problem in your earlier labs!.`
 - Use the `in` keyword to check if the word appears in the title.
 
 #### Pseudocode:
@@ -258,13 +252,13 @@ For each index i from 0 to len(df):
       Set max_seasons to num_seasons
       Set max_title to df['title'][i]
 
-# Return a TUPLE - two values bundled together in parentheses
+# Return a TUPLE - values bundled together in parentheses, usually 2 or more
 # Reminder: tuples look like (value1, value2) and let you return multiple things at once!
-Return (max_title, max_seasons)
+Return (max_title, 'has the most seasons with',max_seasons, 'seasons')
 
 # When you call the function, you can print it like this:
 # print(count_most_seasons(df))
-# Output will look like: ('Show Name', 12)
+# Output will look like: ('Show name', 'has the most seasons with', 12, 'seasons')
 ```
 
 ---
