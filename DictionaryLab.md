@@ -22,6 +22,9 @@ And you can update existing values the same way:
 fruits["Apples"] = 3
 ```
 
+As a final note, dictionaries can be elements of lists, or even a value in other dictionaries. For this lab, dictionaries will be 
+stored inside of a list. You can access them just like a normal list with indexes and iteration. 
+
 
 
 In this lab, we'll be running a book store using Python dictionaries. To complete this lab you will need to:
