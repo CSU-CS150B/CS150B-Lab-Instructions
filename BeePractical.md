@@ -69,7 +69,7 @@ If the row is equal to the user_input variable, then add the row to a new list a
 
 __Make sure that you use the .upper() method before doing the comparison to make sure that capitalization doesn't matter__
 
-__DO NOT USE IN WHEN COMPARING WITH THE FILTER!__
+__DO NOT USE "IN" WHEN COMPARING WITH THE FILTER!__
 
 Example:
 ```
@@ -114,7 +114,7 @@ calc_minimum(data, column_index) : The function takes two parameters, the data y
 
 ## Step 5: calc_maximums(filtered_data)
 
-Given the filtered_data from **Step 2**, you are going to calculate and return the maximum for each one of the 3 following columns in the table :
+Given the filtered_data from **Step 2**, you are going to calculate and return the maximum for each one of the 3 following columns in the table:
 
 - the Imidacloprid concentration (parts per billion).
 
