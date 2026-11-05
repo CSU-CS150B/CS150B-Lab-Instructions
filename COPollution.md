@@ -35,7 +35,11 @@ This function returns a list of lists where the Site ID of each list is equal to
  For using pandas:
  This function takes a dataframe returned from the readCSV() function and selects rows from it based  on what filterby is.
 
- To do so, grab the Site ID column from the dataframe and check for each row that matches filterby.   You do not need a loop to do this in pandas! Dataframes can be filtered by lists of boolean values.  This means you can make a list of all rows where the Site ID matches filterby and then index the    dataframe by that list to filter it! df[column_name] == var, will return a list of boolean values where the all rows whose column_name value matches var is True. You can then use this to index the dataframe.
+ You can do this in two ways in Pandas:
+ 
+ 1. Grab the Site ID column from the dataframe and check for each row that matches filterby.   You do not need a loop to do this in pandas! Dataframes can be filtered by lists of boolean values.  This means you can make a list of all rows where the Site ID matches filterby and then index the    dataframe by that list to filter it! df[column_name] == var, will return a list of boolean values where the all rows whose column_name value matches var is True. You can then use this to index the dataframe.
+    
+ 2. Use a loop to go through the data and the Site ID column to filterby, if they are equal, add that row to a empty list and move to the next row.
 
  This function should return a filtered dataframe where only the rows whose Site ID matches filterby are present.
 
