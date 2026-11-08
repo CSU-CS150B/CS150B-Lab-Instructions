@@ -27,10 +27,21 @@ temp_index - what index in weather has the temperature
 You will use these index below when pulling specific data out from each day in the lists you generate
 
 ## Step 1 - csv_reader(file)
-Using the file name provided, load the row data of the CSV file into a list, and return that list. As the files contain a header column, you will want to skip that header or remove it before returning the list of row values. Look back at the CSV labs for examples, as the code is pretty similar.
+Using the file name provided, load the row data of the CSV file into a list, and return that as a list of lists. As the files contain a header column, you will want to skip that header or remove it before returning the list of row values. Look back at the CSV labs for examples, as the code is pretty similar. Remember the format of our output should look something like:
+
+
+```
+[[Name, Age, Favorite Food],
+ [Juan, 25, Pizza],
+ [Adrian, 21, Hamburger],
+ [Angelica, 23, Pasta]]
+```
+ ### Step 1 - Pandas approach
+ If using pandas, all that is needed for this function is to make a dataframe using read_csv and return that dataframe
+
 
 ## Step 2 - client_input()
-This functions simply prompts the client for input, so that the values in the file can be filtered when calculating average, maximum, and minimum. The prompt is as follows
+This functions simply prompts the client for input then returns that input, so that the values in the file can be filtered when calculating average, maximum, and minimum. The prompt is as follows
 ```
 Please enter a filter: 
 ```
@@ -48,7 +59,7 @@ Given a specific filter, return the average temperature for everything that matc
 
 A question turns into how do you test this? Here is an example of a test that used
 ```python
-weather = csv_reader('Temperatures.csv')
+weather = csv_reader('Weather_Data.csv')
 input_one = "2020"
 input_two = "11-01"
 answer_one = "{:.2f}".format(average_temperature(weather, input_one))
@@ -56,6 +67,10 @@ answer_two = "{:.2f}".format(average_temperature(weather, input_two))
 print("TESTING", answer_one)
 print("TESTING", answer_two)
 ```
+### Step 3 - Pandas approach
+Given a specific filter, return the average temperature for everything that matches that filter (all days in 2020 for example). When working with the filter, this is a case for the in operator.You can say if filter in weather.iloc[{iterating variable}, date_index](if you already pulled row from your weather dataframe using a for loop), and that will only return true if the filter shows up in that date.
+
+Remember: iloc in pandas will selelct rows and columns from a dataframe so for example, df.iloc[2,4] would get the element at row position 2 and column position 4
 ## Step 4 - maximum_temperature(weather, filter)
 Given a specific filter, find the maximum temperature.
 
@@ -63,7 +78,7 @@ Given a specific filter, find the maximum temperature.
 Given a specific filter, find the minimum temperature.
 
 ## Step 6 - run()
-Now is the time to build this into a working program! In the run function, you will load the data from Temperatures.csv into a variable, and also get the value from client_input(). Using both values, you will call average_temperature(), maximum_temperature(), and minimum_temperature(). The output will be formatted as follows (here are a few examples):
+Now is the time to build this into a working program! In the run function, you will load the data from Weather_Data.csv into a variable, and also get the value from client_input(). Using both values, you will call average_temperature(), maximum_temperature(), and minimum_temperature(). The output will be formatted as follows (here are a few examples):
 ```
 Please enter a filter: 2022-03-15
 Average Temperature for 2022-03-15: 47.20
