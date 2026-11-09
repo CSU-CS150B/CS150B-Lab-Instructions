@@ -70,6 +70,9 @@ Think of each list as a row on a spread sheet, with the commas defining the colu
 
 Since we will be working with numbers, we dont want the header in our data and getting passed through mathematical expressions. Make sure you remove the heder using `next()` or `.pop(0)`
 
+### Step 1 - Pandas approach
+ If using pandas, all that is needed for this function is to make a dataframe using read_csv and return that dataframe
+
 ### Step 2 - Filtering the data by team:
 The next step is filtering the data to return a filtered dataset that contains only the values for players of a certain team.
 This function has two parameters: *data* which contains the data you read in the last step and *team* which is the team you will be filtering for.
@@ -89,6 +92,17 @@ nuggets = filter_team(league, "DEN")
 print(len(nuggets))
 #This test output should be 17, as that is how many players were on the Nuggets 2024/2025 roster.
 ```
+### Step 2 - Pandas approach
+The next step is filtering the data to return a filtered datatframe that contains only the values for players of a certain team.
+This function has two parameters: *data* which contains the data you read in the last step and *team* which is the team you will be filtering for.
+```
+# THIS IS PSEUDOCODE IT WILL NOT RUN
+def filter_data
+  for row in range of the length of data
+    if data.iloc[{iterating variable, *team parameter*] is equal to *team argument* add the whole row to the filtered dataset.
+# HINT: after making your filtered list, use pd.DataFrame(list_name) to convert the list into a datatframe
+```
+Remember: iloc in pandas will selelct rows and columns from a dataframe so for example, df.iloc[2,4] would get the element at row position 2 and column position 4, and iloc with one argument, df.iloc[2], will get the row at position 2
 ### Step 3 - Finding Best Player for a Stat:
 
 The `find_stat_max()` function identifies the player with the highest value for a specific statistic. This function requires two parameters:
@@ -117,6 +131,27 @@ for each row in data:
         # Update maximum player when better one is found
         max_player = player name
         max_value = player value
+        
+# Return the two values in a list
+return [max_player, max_value]
+```
+### Step 3 - Pandas approach
+The `find_stat_max()` function identifies the player with the highest value for a specific statistic. This function requires two parameters:
+- `data`: The dataset containing player data
+- `col`: The column index of the statistic we want to find the max for. (You can test this with any global variable you defined in step 0)
+```python
+#THIS IS PSEUDOCODE IT WILL NOT RUN
+set max_player to ''
+set max_valiue to 0
+# Loop through the length of the filtered data
+for row in range of length of data:
+    # Compare current player's stat with maximum player's stat
+    # CRITICAL: Must use > comparison for correct results
+    #Hint: to get values like row stat and set max_player, use iloc
+    if float(data at [row, stat]) > (max_value):
+        # Update maximum player when better one is found
+        max_player = data at [row, player]
+        max_value = data at [row, stat]
         
 # Return the two values in a list
 return [max_player, max_value]
@@ -190,7 +225,21 @@ print(find_most_reliable(okc))
 
  Some teams will have more reliable players than others, some may only have one. Feel free to use the test above to call the function on your favorite team and find your teams
  most reliable players for the 2024/2025 season.
+### Step 5 - Pandas approach
+**Important note**: This step uses team data that has already been filtered. Write this function assuming it is getting a dataframe of filtered players from one team only.
+You do not need to look through the whole league or check what team a player is on inside this function. Instead, when you call this function you should first call your filter_team() function, then use that result as the data argument.
 
+Otherwise, this function acts similarly to its csv conterpart, with only slight changes to the pseudocode: 
+```python
+#THIS IS PSEUDOCODE IT WILL NOT RUN
+set an empty list you will add reliable players to [], this is what you will return once you have found the reliable players.
+
+for row in range of length data:
+   proportion of games started = int(data at row, games started)/ int(data at row, games_played)
+   if the proportion of games started is greater than or equal to 0.95:
+      append a list containing [name, percent of games started] to your empty list.
+   
+```
 
 ### Step 6 - Tell a Summarizing Story Using the Functions:
 
